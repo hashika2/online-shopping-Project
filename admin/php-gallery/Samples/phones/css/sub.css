@@ -1,0 +1,250 @@
+* {
+    box-sizing: border-box
+}
+
+/* Slideshow container */
+.slideshow-container {
+    max-width: 1500px;
+    position: relative;
+    margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption text */
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+#icon-header {
+    /*    width: 1366px;*/
+    /*    margin: 10px auto;*/
+    height: 45px;
+    margin: 0 auto;
+    background-color: #221D1D;
+}
+
+#icon-header ul li {
+    display: inline;
+}
+
+#icon-header ul li a img {
+    padding: 10px 15px 0 0;
+    float: right;
+    width: 40px;
+    height: 40px;
+}
+
+#1-one {
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+}
+
+.boxes {
+    width: 300px;
+    height: 300px;
+/*    border: 1px solid red;*/
+    display: inline-block;
+    margin: 20px 35px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.boxes a{
+    text-decoration: none;
+    position: relative;
+    top: 310px;
+}
+
+#cuntactus-form {
+    width: 350px;
+    float: right;
+    background-color: gray;
+    position: relative;
+    top: 10px;
+}
+
+#footer p {
+    background-color: black;
+    text-align: center;
+    position: relative;
+    top: 300px;
+    color: green;
+    border: 1px solid black;
+    padding: 20px 0;
+}
+
+#nav-bar-header {
+    background-color: white;
+    height: 80px;
+}
+
+#nav-bar-header #shopping-mall {
+    position: relative;
+}
+
+#nav-bar-header ul li {
+    display: inline;
+}
+
+.nav-menu {
+    float: right;
+    position: relative;
+    left: -200px;
+    padding-top: 30px;
+}
+
+.nav-menu li {
+    padding-right: 50px;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: black;
+}
+
+#home-btn {
+    border: 1px solid black;
+    padding: 5px 30px;
+    border-radius: 3px;
+    margin-right: 70px;
+    background-color: darkorange;
+    color: black;
+    text-shadow: 1px 2px 5px green;
+
+}
+
+#home-btn:hover {
+    background-color: #360000;
+}
+
+#home-btn:active {
+    background-color: aqua;
+}
+
+@keyframes s10{
+    from{
+        background-image: url(../Galaxy-s10/images/s10-7.jpg);
+    }
+    to{
+        background-image: url(../Galaxy-s10/images/s10-8.jpg);
+    }
+}
+
+#s10{
+    border-radius: 10px;
+    animation-name: s10;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes pixel-3{
+    from{
+        background-image: url(../Google-Pixel-3/images/5.jpg);
+    }
+    to{
+        background-image: url(../Google-Pixel-3/images/7.jpg);
+    }
+}
+
+#pixel-3{
+    border-radius: 10px;
+    animation-name: pixel-3;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}

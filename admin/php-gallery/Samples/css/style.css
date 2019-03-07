@@ -1,0 +1,842 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#main-container{
+    width: 1400px;
+    margin: 0 auto;
+}
+
+#icon-header{
+/*    width: 1366px;*/
+/*    margin: 10px auto;*/
+    height: 45px;
+    margin: 0 auto;
+    background-color: #221D1D;
+}
+
+#icon-header ul li{
+    display: inline;
+}
+
+#icon-header ul li a img{
+    padding: 10px 15px 0 0;
+    float: right;
+    width: 25px;
+    height: 25px;
+}
+
+#nav-bar-header{
+    background-color:white;
+    height: 80px;
+}
+
+#nav-bar-header #shopping-mall{
+    position: relative;
+}
+
+.nav-menu{
+    float: right;
+    position: relative;
+    left: -200px;
+    padding-top: 30px;
+}
+
+.nav-menu li{
+    padding-right: 50px;
+}
+
+#nav-bar-header ul li{
+    display: inline;
+}
+
+.nav-menu li a{
+    text-decoration: none;
+    color: black;
+}
+
+#home-btn{
+    border: 1px solid black;
+    padding: 5px 30px;
+    border-radius: 3px;
+    margin-right: 70px;
+    background-color: darkorange;
+    color: black;
+    text-shadow: 1px 2px 5px green;
+
+}
+
+#home-btn:hover{
+    background-color: #360000;
+}
+
+#home-btn:active{
+    background-color: aqua;
+}
+@keyframes bg-image{
+    from{
+        background: url(../images/blur-bg-img.jpg);
+    }
+    to{
+        background: url(../images/g+-logo.png);
+    }
+}
+#main-background-image{
+    background: url(../images/blur-bg-img.jpg);
+/*    background-repeat: no-repeat;*/
+    width:auto;
+    height:1000px;
+/*    filter: blur(2px);*/
+/*    animation-name: bg-image;*/
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+
+.special{
+    border-radius: 10px;
+}
+
+@keyframes happy-shopping{
+    from{
+        background-image: url(../images/happy-shopping-1.jpg);
+    }
+    to{
+        background-image: url(../images/happy-shopping-2.jpg);
+    }
+}
+
+#black-friday{
+    position: relative;
+    top: 50px;
+    left: -100px;
+    background: url(../images/happy-shopping-1.jpg);
+    margin: 0px 200px;
+    width: 800px;
+    height: 400px;
+    animation-name: happy-shopping;
+    animation-duration: 10s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes big-sale{
+    from{
+        background-image: url(../images/bee-happy.png);
+    }
+    to{
+        background-image: url(../images/big-sale.jpg);
+    }
+}
+
+#speacial-top-right{
+    background-image: url(../images/big-sale.jpg);
+    position: relative;
+    top: -350px;
+    right: -1000px;
+    width: 250px;
+    height: 180px;
+    animation-name: big-sale;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes cinema{
+    from{
+       background-image: url(../images/cinema-2.jpg);
+    }
+    to{
+        background-image: url(../images/cinema-1.jpg);
+    }
+}
+
+#special-bottom-right{
+    position: relative;
+    width: 250px;
+    height: 200px;
+    background-color: lawngreen;
+    top: -330px;
+    right: -1000px;
+    box-sizing: border-box;
+    animation-name: cinema;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+#sub-background{
+    position: relative;
+    margin: 0 auto;
+    width: 1300px;
+    height: 90px;
+    bottom: 315px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+#sub-background p{
+    padding: 20px 20px;
+    font-family: 'Kalam';
+    font-size: 20px;
+    line-height: 1;
+}
+
+@keyframes em-color{
+    from{
+        color: green;
+    }
+    to{
+        color: darkred;
+    }
+}
+
+#sub-background p em{
+    font-size: 2em;
+    color: green;
+    animation-name: em-color;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    text-shadow: 1px 1px 1px pink;
+}
+
+#sub{
+    position: relative;
+    top: -75px;
+    left: 750px;
+    margin-right: 10px;
+    height: 40px;
+    width: 300px;
+}
+
+@keyframes sub-btn{
+    from{
+        background-color: darkred;
+    }
+    to{
+        background-color: orange;
+    }
+}
+
+#button{
+    position: relative;
+    top: -75px;
+    left: 750px;
+    padding: 0 10px;
+    height: 40px;
+    width: 100px;
+    font-family: 'Merienda';
+    text-shadow: 2px 2px 2px white;
+    animation-name: sub-btn;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+input[type="search"]{
+    padding: 10px;
+    font-family: 'Kalam';
+}
+
+#button:hover{
+    cursor: pointer;
+}
+
+.boxes{
+    position: relative;
+    bottom: 285px;
+    left: 150px;
+    margin: 15px 40px;
+    width: 200px;
+    height: 150px;
+    display: inline-block;
+}
+
+#discount input{
+    width: 200px;
+    height: 150px;
+}
+
+#discount input:hover{
+    cursor: pointer;
+}
+
+@keyframes top-1{
+    from{
+        background:url(../images/women-1.jpg)
+    }
+    to{
+       background:url(../images/women-2.jpg)
+    }
+}
+
+#top-1{
+    background-image: url(../images/women-1.jpg);
+    border-radius: 5px;
+    animation-name: top-1;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes top-2{
+    from{
+        background:url(../images/men-1.jpg)
+    }
+    to{
+        background:url(../images/men-2.jpg)
+    }
+}
+
+#top-2{
+    background-image: url(../images/men-1.jpg);
+    border-radius: 5px;
+    animation-name: top-2;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes top-3{
+    from{
+        background:url(../images/laptops-1.jpg)
+    }
+    to{
+       background:url(../images/laptops-2.jpg)
+    }
+}
+
+#top-3{
+    background-image: url(../images/laptops-1.jpg);
+    border-radius: 5px;
+    animation-name: top-3;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes top-4{
+    from{
+        background:url(../images/jewellery-1.jpg)
+    }
+    to{
+       background:url(../images/jewellery-2.jpg)
+    }
+}
+
+#top-4{
+    background-image: url(../images/jewellery-1.jpg);
+    border-radius: 5px;
+    animation-name: top-4;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bottom-1{
+    from{
+        background:url(../images/watch-1.jpg)
+    }
+    to{
+        background:url(../images/watch-2.jpg)
+    }
+}
+
+#bottom-1{
+    background-image: url(../images/watch-1.jpg);
+    border-radius: 5px;
+    animation-name: bottom-1;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bottom-2{
+    from{
+        background:url(../images/gaming-1.jpg)
+    }
+    to{
+       background:url(../images/gaming-2.jpg)
+    }
+}
+
+#bottom-2{
+    background-image: url(../images/gaming-1.jpg);
+    border-radius: 5px;
+    animation-name: bottom-2;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bottom-3{
+    from{
+       background:url(../images/beauty-1.jpg)
+    }
+    to{
+      background:url(../images/beauty-2.jpg)
+    }
+}
+
+#bottom-3{
+    background-image: url(../images/beauty-1.jpg);
+    border-radius: 5px;
+    animation-name: bottom-3;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bottom-4{
+    from{
+       background:url(../images/sofa-1.jpg)
+    }
+    to{
+      background:url(../images/sofa-2.jpg)
+    }
+}
+
+#bottom-4{
+    background-image: url(../images/sofa-1.jpg);
+    border-radius: 5px;
+    animation-name: bottom-4;
+    animation-direction: alternate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes h-1{
+    from{
+        color: darkred;
+    }
+    to{
+        color: orangered;
+    }
+}
+
+#h-1{
+    position: relative;
+    top: -300px;
+    left: 500px;
+    font-family: 'Allan';
+    font-size: 50px;
+    animation-name: h-1;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes nav-background{
+    from{
+       background-image: url(../images/nav-background-1.jpg);
+    }
+    to{
+       background-image: url(../images/nav-background-2.jpg);
+    }
+}
+
+#navigation-bar{
+/*    background-image: url(../images/nav-background.jpg);*/
+/*    margin:0 110px;*/
+    width: 1400px;
+    height: 300px;
+    animation-name: nav-background;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+#navigation-bar ul{
+    list-style: none;
+    margin: 0;
+}
+
+#navigation-bar ul li{
+    float: left;
+    width: 175px;
+    height: 40px;
+    background-color: black;
+    padding-top: 20px;
+    opacity: 0.8;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+#navigation-bar ul li ul li{
+    display: block;
+}
+
+#navigation-bar ul li a{
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#navigation-bar ul li a:hover{
+    background-color: green;
+}
+
+#navigation-bar ul li ul li{
+    display: none;
+}
+
+#navigation-bar ul li:hover ul li{
+    display: block;
+}
+
+#search input[type="search"]{
+    width: 1000px;
+    height: 40px;
+    position: relative;
+    top: 170px;
+    left: 100px;
+    border-radius: 5px;
+}
+
+@keyframes search-btn{
+    from{
+        background-color: orange;
+    }
+    to{
+        background-color: aqua;
+    }
+}
+
+#search input[type="submit"]{
+    width: 100px;
+    height: 40px;
+    position: relative;
+    top: 170px;
+    left: 120px;
+    background-color: orange;
+    animation-name: search-btn;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    border-radius: 10px;
+}
+
+@keyframes partner-animation{
+    from{
+      background-image: url(../images/partner-background-1.jpg);
+    }
+    to{
+      background-image: url(../images/partner-background-2.jpg);
+    }
+}
+
+#partners{
+    width: 1400px;
+    height: 700px;
+/*    border: 1px solid black;*/
+/*    background: url(../images/partners.jpg);*/
+    position: relative;
+    top: 50px;
+/*    filter: blur(2px);*/
+/*    background: url(../images/road-2-blur.jpg);*/
+    margin: 0 auto;
+    box-sizing: border-box;
+    animation-name: partner-animation;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+.partners{
+    width: 250px;
+    height: 250px;
+/*    border: 1px solid red;*/
+/*    border-radius: 150px;  */
+}
+
+@keyframes partner-h1{
+    from{
+       color: aqua;
+    }
+    to{
+    color: black;
+    }
+}
+
+#partner-h1{
+    position: relative;
+    top: 20px;
+    left: 550px;
+    font-family: 'Allan';
+    font-size: 50px;
+    animation-name: partner-h1;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rolex-omega{
+    from{
+     background-image:url(../images/rolex.png);
+    }
+    to{
+     background-image:url(../images/omega.png);
+    }
+}
+
+#rolex{
+    position: relative;
+    left: 50px ;
+    top: ;
+    background-image: url(../images/rolex.png);
+    animation-name: rolex-omega;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes apple-oppo{
+    from{
+      background-image:url(../images/apple.png);
+    }
+    to{
+      background-image:url(../images/oppo.png);
+    }
+}
+
+#apple{
+    position: relative;
+    left: 50px ;
+    top: 100px ;
+    background-image: url(../images/oppo.png);
+    background-image: url(../images/rolex.png);
+    animation-name: apple-oppo;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes nike-lacoste{
+    from{
+     background-image:url(../images/nike.png);
+    }
+    to{
+     background-image:url(../images/lacoste.png);
+    }
+}
+
+#nike{
+    position: relative;
+    left: 550px;
+    top: -500px;
+    background-image: url(../images/lacoste.png);
+    background-image: url(../images/rolex.png);
+    animation-name: nike-lacoste;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes adidas-versace{
+    from{
+      background-image:url(../images/adidas.png);
+    }
+    to{
+      background-image:url(../images/versace.png);
+    }
+}
+
+#adidas{
+    position: relative;
+    left: 550px;
+    top: -400px;
+    background-image: url(../images/versace.png);
+    background-image: url(../images/rolex.png);
+    animation-name: adidas-versace;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes samsung-huawei{
+    from{
+      background-image:url(../images/samsung.png);
+    }
+    to{
+       background-image:url(../images/huawei.png);
+    }
+}
+
+#samsung{
+    position: relative;
+    left: 1100px;
+    top: -1000px;
+    background-image: url(../images/huawei.png);
+    background-image: url(../images/rolex.png);
+    animation-name: samsung-huawei;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hp-dell{
+    from{
+        background-image:url(../images/hp.png);
+    }
+    to{
+      background-image:url(../images/dell.png);
+    }
+}
+
+#hp{
+    position: relative;
+    left: 1100px;
+    top: -910px;
+    background-image: url(../images/dell.png);
+    background-image: url(../images/rolex.png);
+    animation-name: hp-dell;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+#customer-care-bar{
+    width: 1400px;
+    height: 500px;
+    background-color: #D8CBD8;
+    position: relative;
+    top: 100px;
+}
+
+#customer-care{
+
+}
+
+#leo{
+    position: relative;
+    left: 400px;
+    top: -128px;
+}
+
+@keyframes leo-image{
+    from{
+        background-image: url(../images/leo-1.png);
+    }
+    to{
+        background-image: url(../images/leo-2.png);
+    }
+}
+
+#leo-image{
+    width: 250px;
+    height: 250px;
+/*    border: 1px solid red;*/
+    position: relative;
+    left: -450px;
+    top: -200px;
+    animation-name: leo-image;
+    animation-direction: alternate;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes contact-us{
+    from{
+      background-image: url(../images/call.png);
+    }
+    to{
+     background-image: url(../images/message.png);
+    }
+}
+
+#contact-us{
+    width: 500px;
+    height: 400px;
+    position: relative;
+    top: -270px;
+    left: 800px;
+    animation-name: contact-us;
+    animation-direction: alternate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite
+}
+
+.name{
+    display: inline;
+    margin-left: 20px;
+    padding: 2px 10px;
+    width: 200px;
+    
+}
+
+.email{
+    display: inline;
+    margin-left: 20px;
+    padding: 2px 10px;
+    width: 200px;
+}
+
+.text{
+    margin-left: 20px
+}
+
+
+#earn-leo{
+    width: 400px;
+    height: 100px;
+/*    border: 1px solid black;*/
+    position: relative;
+    top: 100px;
+    left: -400px;
+}
+
+ul li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#customer-care ul li {
+    margin-left: 30px;
+}
+
+#footer p{
+    background-color: black;
+    text-align: center;
+    position: relative;
+    top: 250px;
+    color: green;
+    border: 1px solid black;
+    padding: 20px 0;
+}
+
+#cuntactus-form .contact-p{
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+#contact-us{
+    border: 1px solid black;
+}
+#earn-leo a{
+    padding-left: 20px;
+}
+#contact-btn{
+    width: 100px;
+    height: 40px;
+    display: block;
+    margin-left: 20px;
+    cursor: pointer;
+    border-radius: 25px;
+}
+
+#contact-btn:hover{
+    width: 120px;
+    height: 50px;
+    display: block;
+    margin-left: 20px;
+    cursor: pointer;
+    background-color: darkslategray;
+}
