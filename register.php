@@ -2,7 +2,7 @@
 $username=filter_input(INPUT_POST,'username');
 $email=filter_input(INPUT_POST,'email');
 $password=filter_input(INPUT_POST,'password');
-$hashed_password=$password;
+//$hashed_password=hash(' ',$password); doesn't work hass password
 
 $host="localhost";
 $dbname1="root";
@@ -15,11 +15,11 @@ if(mysqli_connect_error()){
     die('connect error('.mysqli_connect_errno().') '.mysqli_connect_error());
 }
 else{
-    $sql="INSERT INTO user(username,email,password) VALUES('$username','$email','$hashed_password')";
+    $sql="INSERT INTO user(username,email,password) VALUES('$username','$email','$password')";
 
     if($conn->query($sql)===TRUE){
-      $message= "new record inserted succsesful";
-          echo "<script type='text/javascript'>alert('$message');</script>";
+     /* $message= "new record inserted succsesful";
+          echo "<script type='text/javascript'>alert('$message');</script>";*/
     }
     else{
         echo "error: ".$sql."<br>".$conn->error;
@@ -46,6 +46,7 @@ else{
     .frm{
         border:solid black 5px;
         width:650px;
+      
         border-radius:10px;
         margin:150px auto;
         background:#1456;
@@ -57,9 +58,10 @@ else{
        background-color:black;
        margin:auto;
     }
-    .td{
+    .frm tr td label{
       font-size: 10px;
       color:white;
+      padding:5px;
     }
 
     .textinput{
@@ -84,22 +86,22 @@ else{
        </style>
 </head>
 <body>
+ 
     <div class ="header">
-        <h1>Registration <span>Hash</span>Lanka</h1>
-
+    <h1>Registration <a href="shoppingnew.php"><span>Hash</span>Lanka</a></h1>
 </div>
 <form method="post" action="register.php">
    <div class="frm">
         <tr>
-            <td ><b>Username</b></td>
+            <td ><label>Username</label></td>
             <td> <input type="text" name="username" class="textinput"></td>
         </tr>
         <tr>
-            <td ><b>Email</b></td>
+            <td ><label>Email</label></td>
             <td> <input type="email" name="email" class="textinput"></td>
         </tr>
         <tr>
-            <td><b>Password</b></td>
+            <td><label>Password</label></td>
             <td> <input type="password" name="password" class="textinput"></td>
         </tr>
        <!-- <tr>
@@ -107,8 +109,8 @@ else{
             <td> <input type="password" name="password2" class="textinput"></td>
         </tr>-->
         <tr>
-            <td><b>Submit</b></td>
-            <td> <input type="submit" name="register_btn" value="register"><a href="sign_in.php">logout</a></td>
+            
+            <td> <input type="submit" name="register_btn" value="register"><button><a href="sign_in.php">logout</a></button></td>
         </tr>
 </div>
 </form>

@@ -1,4 +1,4 @@
-<?php 
+<?php
 
 $email=filter_input(INPUT_POST,'email');
 
@@ -14,7 +14,7 @@ if(mysqli_connect_error()){
 }
 else{
     $sql="INSERT INTO emai(email) VALUES('$email')";
-   
+
     if($conn->query($sql)===TRUE){
         echo "new record inserted succsesful";
     }
@@ -42,44 +42,39 @@ h2 a{
     text-align:center;
     font-size:60px;
 }
-        
+
         </style>
     </head>
     <link href="webcss.css" type="text/css" rel="stylesheet">
-   
+
     <body>
 
-        <ul class="list">
+        <ul class="list" style="background-color:brown;">
             <div>
-            
-       
-        
-            
-            
-            <li class><a href="register.php">login</a></li>
-            <h2> <img src="Ca.PNG " height="60px" width="150px">
-        <img src="Capture.PNG " height="60px" width="250px"><a>Contact Partner</a></h2>
+                 <li class><a href="register.php">login</a></li>
+                 <h2> <a href="shoppingnew.php"><img src="Ca.PNG " height="60px" width="150px"></a>
+                <img src="Capture.PNG " height="60px" width="250px"><a>Contact Partner</a></h2>
             </div>
-            
-</ul>
-<p>Enter product details such as color, size, materials etc. and other specification requirements to receive an accurate quote.</p>
-<input type="text"name="text"placeholder="comments" class="write">
-<p>Please enter your email addfress</p>
-<form method="post" action="login.php">
-   <div class="frm">
-       
-        <tr>
-            
-            <td> <input type="email" name="email" class="textinput"></td>
-        </tr>
-        <tr>
-            
-            <td> <input type="submit" name="register_btn" value="submit "></td>
-        </tr>
-</div>
-</form>
-</ul>
 
-          
-</body>
+        </ul>
+            <p>Enter product details such as color, size, materials etc. and other specification requirements to receive an accurate quote.</p>
+            <input type="text"name="text"placeholder="comments" class="write">
+            <p>Please enter your email addfress</p>
+            <form method="post" action="login.php">
+            <div class="frm">
+
+                    <tr>
+
+                        <td> <input type="email" name="email" class="textinput"></td>
+                    </tr>
+                    <tr>
+
+                        <td> <input type="submit" name="register_btn" value="submit "></td>
+                    </tr>
+            </div>
+            </form>
+            </ul>
+
+
+    </body>
 </html>

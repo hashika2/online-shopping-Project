@@ -40,7 +40,7 @@ $q = $_GET['q'];
     ul{
       background-color: rgb(82, 4, 4);
       padding:2%;
-      border-radius:3%;
+
 
     }
     .input{
@@ -49,19 +49,25 @@ $q = $_GET['q'];
     p{
 
       background-color: rgb(70, 10, 10);
-    color: rgb(145, 192, 233);
+      color: rgb(145, 192, 233);
 }
 .slideshow-container{
     max-width: 100%;
     position: center;
     margin: auto;
-  
+
 
 
 }
 .dropdown{
-    width: 200px;
+    width: 223px;
+    border-radius:10px; 
 }
+.container{
+  margin-left:110px;
+  
+}
+
 #hd a{
     float:right;
 }
@@ -76,7 +82,7 @@ button{
   text-align: center;
   font-family: arial;
   background-size: 20px;
-  width: 300px;
+  width: 307px;
   height: auto;
   margin-left: 20px;
   margin-right: 90px;
@@ -125,11 +131,11 @@ button{
         <div id="hd">
           <div id="subhd">
             <div class="container">
-              <p>Sri Lankan fastest online shopiinng service    <a href="admin.php">admin</a> <a href="#"><img src="logo1.jpg "width="20px;" width="5px"></a>
+              <p>Sri Lankan fastest online shopiinng service    <a href="#"><img src="logo1.jpg "width="20px;" width="5px"></a>
 
               <a href="https://www.facebook.com/hashika.maduranga"><img src="logo2.jpg "width="20px;" width="5px"></a>
               <a href="#"><img src="logo3.jpg "width="20px;" width="5px"></a>
-              <a href="#"><img src="logo4.jpg "width="20px;" width="5px"></a>
+              <a href="#"><img src="logo6.jpg "width="20px;" width="5px"></a>
               <a href="#"><img src="logo5.jpg "width="20px;" width="5px"></a></p>
 </div>
 
@@ -143,10 +149,10 @@ button{
 
             <li class><a href="sign_in.php">sign in</a></li>
             <li class><a href="partner.php">partner</a></li>
-            <li class><a href="register.php">login</a></li>
+            <li class><a href="register.php">sign out</a></li>
 
           <input class="input" type="text"placeholder ="search.."name = "q" id='q1' >
-           <input  type="submit" name = "search" onclick="window.location.href='shoppingnew.php?document.getElementById('q1').value'" placeholder="Enter" class="bttn" value="search">
+           <input  type="submit" name = "search" onclick="window.location.href='shoppingnew.php?document.getElementById('q1').value'" placeholder="Enter" class="bttn" value="search"style="  border-radius:10px;">
 </form>
 
 <?php
@@ -186,26 +192,26 @@ else{
         <div class="slideshow-container">
 
           <div class="mySlides fade">
-            <div class="numbertext">1 / 4</div>
-            <img src="af1.jpg "height="400px" style="width:100%;">
+            <div class="numbertext"></div>
+            <img src="sh6.jpg "height="500px" style="width:100%;">
             <div class="text"></div>
           </div>
 
           <div class="mySlides fade">
-            <div class="numbertext">2 / 4</div>
-            <img src="C.jpg"height="400px" style="width:100%">
+            <div class="numbertext"></div>
+            <img src="sh2.jpg"height="500px" style="width:100%">
             <div class="text"></div>
           </div>
 
           <div class="mySlides fade">
-            <div class="numbertext">3 / 4</div>
-            <img src="B.jpg" height="400px"style="width:100%">
+            <div class="numbertext"></div>
+            <img src="B.jpg" height="500px"style="width:100%">
             <div class="text"></div>
           </div>
 
           <div  class="mySlides fade">
-            <div class="numbertext">4 / 4</div>
-            <img src="A.jpg"height="400px" style="width:100%">
+            <div class="numbertext"></div>
+            <img src="A.jpg"height="500px" style="width:100%">
             <div class="text"></div>
           </div>
 
@@ -225,13 +231,14 @@ else{
           <script src="webpage.js"></script>
 
       </div>
+      <div class="heading">
+        <h2 style="font-size:40px; background-color:red">Category</h2>
+      </div>
       <div class="container">
-      <div id="heading">
-        <h2>Category</h2>
-      </div>
-      </div>
 
-      <ul class="sub_head" style="background-color:rgb(104, 100, 100); padding: 1px;margin: 20px;" >
+      </div>
+  
+      <ul class="sub_head" style="background-color:rgb(104, 100, 100); padding: 1px;margin:20px" >
 
         <!--=====category list======-->
 
@@ -307,6 +314,7 @@ else{
 
 </ul>
 
+
 <!---<div class="row">
 <div class="column" style="background-color:rgb(231, 223, 212);" >
 <div class="title">hashika</div><img src="madew.jpg "height="100px" width="100px">
@@ -329,9 +337,8 @@ else{
 
 <!---catagory-->
   <div class="container">
-    <div id="heading block">
-
-    </div>
+    
+  
      <!---first catbox-->
     <a href="popular.html">
         <div class="catbox">
@@ -394,19 +401,20 @@ else{
   </div>
 
   <!--offers -->
-  <div class="container">
-      <div id="heading">
-        <h2>Offers</h2>
+  <div id="heading">
+        <h2 style="font-size:40px; background-color:red">Offers</h2>
       </div>
+  <div class="container">
+      
        <!--offers  boxes -->
       <div class="offers">
-        <a href="#"><img src="offer2.jpg" height="200px"></a>
+        <a href="#"><img src="offer2.jpg" height="210px"style="margin-left:50px;"></a><!--no same size of all pictures thats why marigns are different-->
       </div>
       <div class="offers">
-          <a href="#"><img src="offer6.jpg" height="200px"></a>
+          <a href="#"><img src="offer6.jpg" height="210px"style="margin-left:80px;"></a>
         </div>
         <div class="offers">
-            <a href="#"><img src="offer4.jpg" height="200px"></a>
+            <a href="#"><img src="offer4.jpg" height="210px"style="margin-left:110px;"></a>
           </div>
       </div>
 
@@ -415,27 +423,28 @@ else{
               <div id="footer">
                 <div class="container">
                   <div class="footer_sub_1">
-                    <center>
+                    
                     <h2>Mail Us:</h2>
-                  </center>
-                    <p class="p">Mail Us:
-Hashlanka Internet Pvt Ltd Block B (Galle),
+               
+                    <p class="p"Style="background-color:black">Mail Us:
+                            Hashlanka Internet Pvt Ltd Block B (Galle),
 
-Ground Floor, Embassy Tech Village,
+                            Ground Floor, Embassy Tech Village,
 
-Outer Ring Road, Devarabeesanahalli Village,
+                            Outer Ring Road, Devarabeesanahalli Village,
 
-Varthur Hobli, Bengaluru East Taluk,
+                            Varthur Hobli, Bengaluru East Taluk,
 
-Bengaluru District,
+                            Bengaluru District,
 
-Galle, Srilanka, 560103. <span><a href="#">read more..</a></span> </p>
+                            Galle, Srilanka, 560103. <span><a href="#">read more..</a></span>
+                     </p>
 
                     </div>
                   <div class="footer_sub_2">
                     <center>
                       <h2>Important Links</h2>
-                      <ul>
+                      <ul Style="background-color:black">
                         <li><a href="#">Home</a></li>
                         <li><a href="#">Deals</a></li>
                         <li><a href="#">products</a></li>
@@ -446,13 +455,15 @@ Galle, Srilanka, 560103. <span><a href="#">read more..</a></span> </p>
                   <div class="footer_sub_3">
                       <center>
                           <h2>Social Links</h2>
-                          <ul>
+                          <ul Style="background-color:black">
                             <li><a href="https://www.facebook.com/hashika.maduranga">Facebook</a></li>
                             <li><a href="#">Google</a></li>
                             <li><a href="#">Youtube</a></li>
                             <li><a href="#">Twitter</a></li>
                             <li><a href="#">Linkedin</a></li>
                             <li><a href="#">Blogger</a></li>
+                            <li><a href="#">Watssapp</a></li>
+                            <li><a href="#">Viber</a></li>
                           </ul>
                         </center>
                   </div>

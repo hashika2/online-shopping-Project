@@ -28,7 +28,7 @@
                             <div class="prod-feature">
                                 <p> special</p>
                                 <p style="color:white ;font-weight:bold">price :Rs2500/-</p>     
-                                <button onclick="window.location.href='shoppingnew.php'" >add to cart"</button>  
+                                <button onclick="window.location.href='add.php?id=1&userid=1'" >add to cart"</button>  
                         </div>                   
                             </div>
                     </div>

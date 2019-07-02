@@ -236,10 +236,6 @@ button{
             <a href="shopping.html">
                 <div class="catbox">
                     <img src=" bags/bg1.jpg " height="400px" alt="bag">
-                    <h1>Tailored Jeans</h1>
-  <p class="price">$19.99</p>
-  <p>Some text about the jeans..</p>
-  <p><button>Add to Cart</button></p>
                     <span>Bags <b>20%</b></span>
                   </div>
             </a>
