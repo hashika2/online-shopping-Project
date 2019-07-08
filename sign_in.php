@@ -3,9 +3,9 @@ $dbserver="localhost";
 $user="root";
 $pass="";
 $db="test";
-//$connect=mysqli_connect("localhost","root","","login");
+
 $connect=mysqli_connect($dbserver,$user,$pass,$db);
-//mysqli_select_db($connect,$db);
+
   $error=array( );
    if(isset($_POST['username'])){
         if(empty(trim($_POST['username']))){
@@ -35,15 +35,7 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
         echo "you are not login";
     }
   }
-    /* $num=mysqli_num_rows($result);
-    if($num==n 1){
-        echo "you have successfully logged";
-        exit();
-    }
-    else{
-        echo "your are not loggedin";
-        exit();
-    }*/
+   
 
 
 ?>
@@ -59,69 +51,100 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
 
     <style>
     body{
-        background-image:url("img2.jpg");
-        width:100%;
-        height:100%;
-        position:fixed;
-        content:'';
-        background-position:center center;
-        background-repeat:no-repeat;
-        background-attachment:fixed;
-        background-size:cover;
-    }
-    .header{
-        background-color:brown;
-        height:80px;
-        margin:20px;
-        line-height: 35px;
-        text-align: center;
-        line-height:60px;
+	margin:0;
+	padding:0;
+	background-image:url(bg2.jpg);
+	width: 100%;
 
-    }
-    .frm{
-        border:solid black 5px;
-        width:600px;
-        border-radius:10px;
-        margin:120px auto;
-        background:#1456;
-        height:200px;
+	background-size: cover;
+	
+	font-family: sans-serif;
+}
+.header h1{
+    font-size:50px;
+    margin-top:50px;
+    background-color:brown;
+}
+.loginbox{
+	width: 320px;
+	height: 400px;
+	background:#000;
+	color:#fff;
+	top: 0%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,50%);
+	box-sizing: border-box;
+	padding: 70px 30px
+}
+.avatar{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50%-50px); 
 
+}
+h1{
+	margin:0;
+	padding:0 0 20px;
+	text-align:center;
+	font-size: 22px;
+}
+.loginbox p{
+	margin:0;
+	padding: 0;
+	font-weight: bold;
+}
 
-    }
-    .frm tr td {
-      margin-left: 20px;
-    }
+.loginbox input{
+	width: 100%;
+	margin-bottom: 20px;
 
-    .textinput{
-        color:white;
-        background:#1456 ;
-        font:white;
-        padding:5px;
-        margin-left:65%;
-    }
-    body{
-        background-color:#1234;
-    }
+}
+.loginbox input[ type="text"],input[type="password"]{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: #fff;
+	font-size: 16px
+
+}
+.loginbox input[type="submit"]{
+
+	border:none;
+	outline: none;
+	height: 40px;
+	background:#fb2525;
+	color:#fff;
+	font-size: 18px;
+	border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover{
+	cursor: pointer;
+	background:#ffc107;
+	color: #000;
+}
+.loginbox a{
+	text-decoration: none;
+	font-size:12px;
+	line-height: 20px;
+	color:darkgrey;
+}
+.loginbox a:hover{
+	color:#ffc107;
+}
     </style>
 
 </head>
 <body>
 
-<!--<div class="well">
-<h4>Login</h4>
-<form action="include/sign_in.php"method="post">
-<div class ="input-group">
-<input name="username" type="text" class="form-control" placeholder="Enter username">
-<span class ="input-group-btn">
-<button name="submit" class="btn btn-default" type="submit">
-<span class="glyp"></span>
-</button>
-</span>
-</div>
-</form>
-</div>-->
+
 <div class ="header">
-        <h1><b> login to <a href="shoppingnew.php">HASHLANKA</a> </b></h1>
+        <h1><b> Sign to <a href="shoppingnew.php">HASHLANKA</a> </b></h1>
 
 </div>
 <?php
@@ -129,28 +152,19 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
     echo 'there was an error on your form';
   }
  ?>
-<form method="post" action="sign_in.php">
-   <div class="frm">
-        <tr>
-
-            <td><b>Username</b></td>
-            <td> <input type="text" name="username" class="textinput"></td>
-        </tr>
-
-        <tr>
-            <td><b>Password</b></td>
-            <td> <input type="password" name="password" class="textinput"></td>
-        </tr>
-       <!-- <tr>
-           <td>Confirm Password</td>
-            <td> <input type="password" name="password2" class="textinput"></td>
-        </tr>-->
-        <tr>
-            <td></td>
-            <td> <input type="submit" name="login" value="login"> </td>
-        </tr>
-</div>
-</form>
+<div class="loginbox">
+		
+		<h2>Sign In Here</h2>
+		<form action="sign_in.php" method="post">
+			<p>username</p>
+			<input type="text" name="username" placeholder="username">
+            <p>password</p>
+			<input type="password" name="password" placeholder="password">
+			<input type="submit" name="" value="Login">
+			<a href="">Lost your password?</a><br>
+			<a href=""> Don't have an account?</a>
+		</form>
+	</div>
 
 </body>
 </html>
