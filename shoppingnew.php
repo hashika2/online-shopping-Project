@@ -17,26 +17,12 @@ $q = $_GET['q'];
     <head>
         <title>my online shopping website</title>
 
-      <!--  <script type="text/javascript">
-  fuction active(){
-    var sb=document.getElementById('searchBox');
-    if(sb.value=='search...'){
-      sb.value=''
-      sb.placeholder='search...'
-    }
-  }
-  function inactive(){
-    var sb=document.getElementById('searchBox');
-    if(sb.value==''){
-      sb.placeholder=''
-      sb.placeholder='search...'
-    }
-  }
-</script>-->
+     
 
     </head>
     <link href="webcss.css" type="text/css" rel="stylesheet">
     <style>
+    
     ul{
       background-color: rgb(82, 4, 4);
       padding:2%;
@@ -241,7 +227,7 @@ else{
       <ul class="sub_head" style="background-color:rgb(104, 100, 100); padding: 1px;margin:20px" >
 
         <!--=====category list======-->
-
+  <div class="main_container">
   <li class="dropdown" >
       <a href="javascript:void(0)" class="dropbtn">spectacles</a>
       <div class="dropdown-content">
@@ -315,25 +301,7 @@ else{
 </ul>
 
 
-<!---<div class="row">
-<div class="column" style="background-color:rgb(231, 223, 212);" >
-<div class="title">hashika</div><img src="madew.jpg "height="100px" width="100px">
-</div>
 
-
-<div class="column" style="background-color:rgb(231, 223, 212);"></div>
-
-  <div class="column" style="background-color:rgb(231, 223, 212);"></div>
-</div>
-
-<div class="row">
-  <div class="column" style="background-color:rgb(231, 223, 212)" ></div>
-
-
-  <div class="column" style="background-color:rgb(231, 223, 212);"></div>
-
-    <div class="column" style="background-color:rgb(231, 223, 212);"></div>
-  </div>-->
 
 <!---catagory-->
   <div class="container">
@@ -396,7 +364,7 @@ else{
           </div>
     </a>
 
-
+</div>
 
   </div>
 
