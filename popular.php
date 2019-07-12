@@ -74,231 +74,82 @@ if(isset($_GET["action"])){
                       <input class="input" type="text"placeholder ="search.."style="  border-radius:10px;" ><button type="submit"style="  border-radius:10px;">search</button>
                     </ul>
                 <!--products-->
+                <?php
+             $query = "SELECT * FROM cart ORDER BY id ASC";
+            $result =  mysqli_query($connection,$query);
+            if(mysqli_num_rows($result)>0){
+                while($row = mysqli_fetch_array($result))
+                {
+                    ?>
+                    <form method="post" action="popular.php?action=add&id=<?php echo $row["id"]; ?>">
                     <div class="prod-container">
                                 <!--first product-->
                             <div class="prod-box" >
-                                    <img src="shirts/sh1.jpg" height="300px" alt="man suit">
+                                    <img src="shirts/<?php echo $row["image"]; ?>" height="300px" alt="man suit">
+                                    <h5 style="color:black;font-size:20px;"><?php echo $row["name"]; ?></h5>
                                     <div class="prod-trans">
                                     <div class="prod-feature">
                                         <p>man special</p>
-                                        <p style="color:white ;font-weight:bold">price :100$</p>     
+                                        <p style="color:white;font-weight:bold"><?php echo $row["price"] ; ?></p>  
+                                        <input type="text" name="quantity"  value="1">
+                                        <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?> ">
+                                        <input type="hidden"  name="hidden_price" value="<?php echo $row["price"]; ?>">
+                                         <br>   
                                         <input type="button"value="add to cart">  
                                 </div>                   
                                     </div>
                             </div>
-                             <!--first product-->
-                            <div class="prod-box">
-                                        <img src="shirts/sh2.jpg" height="300px" alt="man suit">
-                                        <div class="prod-trans">
-                                         <div class="prod-feature">
-                                          <p>man special</p>
-                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                          <input type="button"value="add to cart">    
-                                        </div>       
-                                        </div>
-                                </div>
-                                 <!--first product-->
-                             <div class="prod-box">
-                                        <img src="shirts/sh3.jpg" height="300px" alt="man suit">
-                                        <div class="prod-trans">
-                                         <div class="prod-feature">
-                                          <p>man special</p>
-                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                          <input type="button"value="add to cart">    
-                                        </div>       
-                                        </div>
-                                </div>
-                                 <!--first product-->
-                             <div class="prod-box">
-                                                <img src="shirts/sh4.jpg" height="300px" alt="man suit">
-                                                <div class="prod-trans">
-                                                 <div class="prod-feature">
-                                                  <p>man special</p>
-                                                  <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                  <input type="button"value="add to cart">    
-                                                </div>       
-                                                </div>
-                                        </div>
-                                         <!--first product-->
-                             <div class="prod-box">
-                                                        <img src="shirts/sh5.jpg" height="300px" alt="man suit">
-                                                        <div class="prod-trans">
-                                                         <div class="prod-feature">
-                                                          <p>man special</p>
-                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                          <input type="button"value="add to cart">    
-                                                        </div>       
-                                                        </div>
-                                                </div>
-                           <div class="prod-box">
-                                                                <img src="shirts/sh6.jpg" height="300px" alt="man suit">
-                                                                <div class="prod-trans">
-                                                                 <div class="prod-feature">
-                                                                  <p>man special</p>
-                                                                  <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                  <input type="button"value="add to cart">    
-                                                                </div>       
-                                                                </div>
-                                                        </div>
-                           <div class="prod-box">
-                                                                        <img src="shirts/sh7.jpg" height="300px" alt="man suit">
-                                                                        <div class="prod-trans">
-                                                                         <div class="prod-feature">
-                                                                          <p>man special</p>
-                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                          <input type="button"value="add to cart">    
-                                                                        </div>       
-                                                                        </div>
-                                                                </div>
-                          <div class="prod-box">
-                                                                                <img src="shirts/sh8.jpg" height="300px" alt="man suit">
-                                                                                <div class="prod-trans">
-                                                                                 <div class="prod-feature">
-                                                                                  <p>man special</p>
-                                                                                  <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                  <input type="button"value="add to cart">    
-                                                                                </div>       
-                                                                                </div>
-                                                                        </div>
-                           <div class="prod-box">
-                                                                                        <img src="shirts/sh9.jpg" height="300px" alt="man suit">
-                                                                                        <div class="prod-trans">
-                                                                                         <div class="prod-feature">
-                                                                                          <p>man special</p>
-                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                          <input type="button"value="add to cart">    
-                                                                                        </div>       
-                                                                                        </div>
-                                                                                </div>  
-                                                                                <div class="prod-box">
-                                                                                                <img src="shirts/sh19.jpg" height="300px" alt="man suit">
-                                                                                                <div class="prod-trans">
-                                                                                                 <div class="prod-feature">
-                                                                                                  <p>man special</p>
-                                                                                                  <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                  <input type="button"value="add to cart">    
-                                                                                                </div>       
-                                                                                                </div>
-                                                                                        </div>
-                                                                                        <div class="prod-box">
-                                                                                                        <img src="shirts/sh10.jpg" height="300px" alt="man suit">
-                                                                                                        <div class="prod-trans">
-                                                                                                         <div class="prod-feature">
-                                                                                                          <p>man special</p>
-                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                          <input type="button"value="add to cart">    
-                                                                                                        </div>       
-                                                                                                        </div>
-                                                                                                </div>
-                                                                                                <div class="prod-box">
-                                                                                                                <img src="shirts/sh11.jpg" height="300px" alt="man suit">
-                                                                                                                <div class="prod-trans">
-                                                                                                                 <div class="prod-feature">
-                                                                                                                  <p>man special</p>
-                                                                                                                  <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                  <input type="button"value="add to cart">    
-                                                                                                                </div>       
-                                                                                                                </div>
-                                                                                                        </div>
-                                                                                                        <div class="prod-box">
-                                                                                                                        <img src="shirts/sh12.jpg" height="300px" alt="man suit">
-                                                                                                                        <div class="prod-trans">
-                                                                                                                         <div class="prod-feature">
-                                                                                                                          <p>man special</p>
-                                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                          <input type="button"value="add to cart">    
-                                                                                                                        </div>       
-                                                                                                                        </div>
-                                                                                                                </div><div class="prod-box">
-                                                                                                                                <img src="shirts/sh13.jpg" height="300px" alt="man suit">
-                                                                                                                                <div class="prod-trans">
-                                                                                                                                 <div class="prod-feature">
-                                                                                                                                  <p>man special</p>
-                                                                                                                                  <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                                  <input type="button"value="add to cart">    
-                                                                                                                                </div>       
-                                                                                                                                </div>
-                                                                                                                        </div>
-                                                                                                                        <div class="prod-box">
-                                                                                                                                        <img src="shirts/sh14.jpg" height="300px" alt="man suit">
-                                                                                                                                        <div class="prod-trans">
-                                                                                                                                         <div class="prod-feature">
-                                                                                                                                          <p>man special</p>
-                                                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                                          <input type="button"value="add to cart">    
-                                                                                                                                        </div>       
-                                                                                                                                        </div>
-                                                                                                                                </div>  
-                                                                                                                                <div class="prod-box">
-                                                                                                                                        <img src="shirts/sh15.jpg" height="300px" alt="man suit">
-                                                                                                                                        <div class="prod-trans">
-                                                                                                                                         <div class="prod-feature">
-                                                                                                                                          <p>man special</p>
-                                                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                                          <input type="button"value="add to cart">    
-                                                                                                                                        </div>       
-                                                                                                                                        </div>
-                                                                                                                                </div>                           
-                                                                                                                                <div class="prod-box">
-                                                                                                                                        <img src="shirts/sh16.jpg" height="300px" alt="man suit">
-                                                                                                                                        <div class="prod-trans">
-                                                                                                                                         <div class="prod-feature">
-                                                                                                                                          <p>man special</p>
-                                                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                                          <input type="button"value="add to cart">    
-                                                                                                                                        </div>       
-                                                                                                                                        </div>
-                                                                                                                                </div>                           
-                                                                                                                                <div class="prod-box">
-                                                                                                                                        <img src="shirts/sh17.jpg" height="300px" alt="man suit">
-                                                                                                                                        <div class="prod-trans">
-                                                                                                                                         <div class="prod-feature">
-                                                                                                                                          <p>man special</p>
-                                                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                                          <input type="button"value="add to cart">    
-                                                                                                                                        </div>       
-                                                                                                                                        </div>
-                                                                                                                                </div>                           
-                                                                                                                                <div class="prod-box">
-                                                                                                                                        <img src="shirts/sh18.jpg" height="300px" alt="man suit">
-                                                                                                                                        <div class="prod-trans">
-                                                                                                                                         <div class="prod-feature">
-                                                                                                                                          <p>man special</p>
-                                                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                                          <input type="button"value="add to cart">    
-                                                                                                                                        </div>       
-                                                                                                                                        </div>
-                                                                                                                                </div>                           
-                                                                                                                                <div class="prod-box">
-                                                                                                                                        <img src="shirts/sh19.jpg" height="300px" alt="man suit">
-                                                                                                                                        <div class="prod-trans">
-                                                                                                                                         <div class="prod-feature">
-                                                                                                                                          <p>man special</p>
-                                                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                                          <input type="button"value="add to cart">    
-                                                                                                                                        </div>       
-                                                                                                                                        </div>
-                                                                                                                                </div>                           
-                                                                                                                                <div class="prod-box">
-                                                                                                                                        <img src="shirts/sh20.jpg" height="300px" alt="man suit">
-                                                                                                                                        <div class="prod-trans">
-                                                                                                                                         <div class="prod-feature">
-                                                                                                                                          <p>man special</p>
-                                                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                                          <input type="button"value="add to cart">    
-                                                                                                                                        </div>       
-                                                                                                                                        </div>
-                                                                                                                                </div>                           
-                                                                                                                                <div class="prod-box">
-                                                                                                                                        <img src="shirts/sh21.jpg" height="300px" alt="man suit">
-                                                                                                                                        <div class="prod-trans">
-                                                                                                                                         <div class="prod-feature">
-                                                                                                                                          <p>man special</p>
-                                                                                                                                          <p style="color:white ;font-weight:bold">price :100$</p>      
-                                                                                                                                          <input type="button"value="add to cart">    
-                                                                                                                                        </div>       
-                                                                                                                                        </div>
-                                                                                                                                </div>    
+                </form>
+                <?php
+                }
+            }
+            ?>
+
+        <h2>Order List</h2>
+            <div class="table">
+                <table class="ta1">
+                    <tr>
+                    <th width="40%">Item Name</th>
+                    <th width="10%">Quantity</th>
+                    <th width="20%">Price</th>
+                    <th width="15%">Total</th>
+                    <th width="5%">Action</th>
+
+                </tr    >
+                <?php
+                    if(!empty($_SESSION["shopping_cart"])){
+                        $total = 0;
+                    foreach($_SESSION["shopping_cart"] as $key => $values)
+                    {
+                     ?>
+                    <tr>
+                        <td><?php echo $values["item_name"]; ?></td>
+                        <td><?php echo $values["item_quantity"]; ?></td>
+                        <td>Rs.<?php echo $values["item_price"]; ?></td>
+                        <td><?php  echo number_format ($values["item_quantity"]*$values["item_price"],2); ?></td>
+                        <td><a href="popular.php?action=delete&id=<?php echo $values["item_id"];?>"><span class="re">Remove</span></a></td>
+
+                    </tr>
+                    <?php
+                         $total=$total + ($values["item_quantity"] * $values["item_price"]);
+                    }
+                        ?>
+
+                    <tr>
+                        <td colspan="3" aling="right"><b>Total</b></td>
+                        <td aling="right"><b>Rs.<?php echo number_format($total,2);?></b></td>
+                    </tr>
+                    <?php
+                    }
+
+                    ?>
+             </table>
+
+
+                </div>
+
+            </div>
+                             </div>    
                                                                                                                                 <div id="footer">
                                                                                                                                         <div class="container">
                                                                                                                                           <div class="footer_sub_1">
