@@ -61,7 +61,7 @@ if(isset($_GET["action"])){
                     <img src="Ca.PNG " height="60px" width="150px">
                     <img src="Capture.PNG " height="60px" width="250px">
                     
-                        <li class="active"><a href="#home">logout</a></li>
+                       
                         <li class><a href="service.html">service</a></li>
                         <li class><a href="#">partner</a></li>
                         <li><a href="#">login</a></li>
@@ -70,6 +70,7 @@ if(isset($_GET["action"])){
                     </ul>
         <div class="ca1">
             <h2> Shoping Cart</h2>
+
             <?php
              $query = "SELECT * FROM cart ORDER BY id ASC";
             $result =  mysqli_query($connection,$query);
@@ -77,10 +78,11 @@ if(isset($_GET["action"])){
                 while($row = mysqli_fetch_array($result))
                 {
                     ?>
+
             <div class="ca2">
             <form method="post" action="Cart2.php?action=add&id=<?php echo $row["id"]; ?>">
-                <div class="ca3"  >
-                    <img src="<?php echo $row["image"]; ?>" style="width:150px; height:250px;" >
+                <div class="ca3" style="margin-left:50px;width:250px;height:500px" >
+                    <img src="<?php echo $row["image"]; ?>" style="width:200px; height:250px;" >
                     <h5 style="color:black;font-size:20px;"><?php echo $row["name"]; ?></h5>
                     <h5 style="background-color:red;font-size:20px;"><?php echo $row["price"] ; ?></h5>
                     <input type="text" name="quantity"  value="1">
@@ -109,7 +111,7 @@ if(isset($_GET["action"])){
                     <th width="15%">Total</th>
                     <th width="5%">Action</th>
 
-                </tr>
+                </tr    >
                 <?php
                     if(!empty($_SESSION["shopping_cart"])){
                         $total = 0;
