@@ -133,7 +133,7 @@ h1{
 <div class="loginbox">
 		
 		<h1>Login Here</h1>
-		<form>
+		<form action ="register.php" method="post">
 			<p>username</p>
 			<input type="text" name="username" placeholder="username">
       <p>email</p>

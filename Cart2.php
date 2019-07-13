@@ -66,7 +66,7 @@ if(isset($_GET["action"])){
                         <li class><a href="#">partner</a></li>
                         <li><a href="#">login</a></li>
                       
-                      <input class="input" type="text"placeholder ="search.."style="  border-radius:10px;" ><button type="submit"style="  border-radius:10px;">search</button>
+                      <input class="input" type="text"placeholder ="search.."style="  border-radius:10px;width:800px" ><button type="submit"style="  border-radius:10px;">search</button>
                     </ul>
         <div class="ca1">
             <h2> Shoping Cart</h2>
@@ -82,7 +82,7 @@ if(isset($_GET["action"])){
             <div class="ca2">
             <form method="post" action="Cart2.php?action=add&id=<?php echo $row["id"]; ?>">
                 <div class="ca3" style="margin-left:50px;width:250px;height:500px" >
-                    <img src="<?php echo $row["image"]; ?>" style="width:200px; height:250px;" >
+                    <img src="phones/<?php echo $row["image"]; ?>" style="width:200px; height:250px;" >
                     <h5 style="color:black;font-size:20px;"><?php echo $row["name"]; ?></h5>
                     <h5 style="background-color:red;font-size:20px;"><?php echo $row["price"] ; ?></h5>
                     <input type="text" name="quantity"  value="1">

@@ -63,7 +63,7 @@ if(isset($_GET["action"])){
     
     <body>
             <ul style="background: brown">
-                    <img src="Ca.PNG " height="60px" width="150px">
+                    <a href="shoppingnew.php"><img src="Ca.PNG " height="60px" width="150px"></a>
                     <img src="Capture.PNG " height="60px" width="250px">
                     
                         <li class="active"><a href="#home">logout</a></li>
@@ -71,11 +71,11 @@ if(isset($_GET["action"])){
                         <li class><a href="#">partner</a></li>
                        
                       
-                      <input class="input" type="text"placeholder ="search.."style="  border-radius:10px;" ><button type="submit"style="  border-radius:10px;">search</button>
+                      <input class="input" type="text"placeholder ="search.." style="  border-radius:10px;width:800px" ><button type="submit"style="  border-radius:10px;">search</button>
                     </ul>
                 <!--products-->
                 <?php
-             $query = "SELECT * FROM cart ORDER BY id ASC";
+             $query = "SELECT * FROM cart WHERE id >=7";
             $result =  mysqli_query($connection,$query);
             if(mysqli_num_rows($result)>0){
                 while($row = mysqli_fetch_array($result))
@@ -89,8 +89,8 @@ if(isset($_GET["action"])){
                                     <h5 style="color:black;font-size:20px;"><?php echo $row["name"]; ?></h5>
                                     <div class="prod-trans">
                                     <div class="prod-feature">
-                                        <p>man special</p>
-                                        <p style="color:white;font-weight:bold"><?php echo $row["price"] ; ?></p>  
+                                        <p>men special</p>
+                                        <p style="color:white ;font-weight:bold">$<?php echo $row["price"] ; ?></p>  
                                         <input type="text" name="quantity"  value="1">
                                         <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?> ">
                                         <input type="hidden"  name="hidden_price" value="<?php echo $row["price"]; ?>">
@@ -99,6 +99,7 @@ if(isset($_GET["action"])){
                                 </div>                   
                                     </div>
                             </div>
+                </div>  
                 </form>
                 <?php
                 }
@@ -115,7 +116,7 @@ if(isset($_GET["action"])){
                     <th width="15%">Total</th>
                     <th width="5%">Action</th>
 
-                </tr    >
+                </tr>
                 <?php
                     if(!empty($_SESSION["shopping_cart"])){
                         $total = 0;
@@ -125,7 +126,7 @@ if(isset($_GET["action"])){
                     <tr>
                         <td><?php echo $values["item_name"]; ?></td>
                         <td><?php echo $values["item_quantity"]; ?></td>
-                        <td>Rs.<?php echo $values["item_price"]; ?></td>
+                        <td>$.<?php echo $values["item_price"]; ?></td>
                         <td><?php  echo number_format ($values["item_quantity"]*$values["item_price"],2); ?></td>
                         <td><a href="popular.php?action=delete&id=<?php echo $values["item_id"];?>"><span class="re">Remove</span></a></td>
 
@@ -149,51 +150,64 @@ if(isset($_GET["action"])){
                 </div>
 
             </div>
-                             </div>    
-                                                                                                                                <div id="footer">
-                                                                                                                                        <div class="container">
-                                                                                                                                          <div class="footer_sub_1">
-                                                                                                                                            <center>
-                                                                                                                                            <h2>projects</h2>
-                                                                                                                                          </center>
-                                                                                                                                            <p class="p">this is my fist e commerce project.jhgdfdfjhbncvbcjhvbjvbjbv kjbvf kjvbv kjddyfhb jcbdbd hgdjhds jsbdsjf jhbdf jhbsd jbd jdbf bdd bd 
-                                                                                                                                              c dd dkjf jddvb kjcxv <span><a href="#">read more..</a></span> </p>
-                                                                                                                                          
-                                                                                                                                            </div>
-                                                                                                                                          <div class="footer_sub_2">
-                                                                                                                                            <center>
-                                                                                                                                              <h2>Important Links</h2>
-                                                                                                                                              <ul>
-                                                                                                                                                <li><a href="#">Home</a></li>
-                                                                                                                                                <li><a href="#">Deals</a></li>
-                                                                                                                                                <li><a href="#">products</a></li>
-                                                                                                                                                <li><a href="#">Order</a></li>
-                                                                                                                                              </ul>
-                                                                                                                                            </center>
-                                                                                                                                          </div>
-                                                                                                                                          <div class="footer_sub_3">
-                                                                                                                                              <center>
-                                                                                                                                                  <h2>Social Links</h2>
-                                                                                                                                                  <ul>
-                                                                                                                                                    <li><a href="#">Facebook</a></li>
-                                                                                                                                                    <li><a href="#">Google</a></li>
-                                                                                                                                                    <li><a href="#">Youtube</a></li>
-                                                                                                                                                    <li><a href="#">Twitter</a></li>
-                                                                                                                                                    <li><a href="#">Linkedin</a></li>
-                                                                                                                                                    <li><a href="#">Blogger</a></li>
-                                                                                                                                                  </ul>
-                                                                                                                                                </center>
-                                                                                                                                          </div>
-                                                                                                                                          <div class="footer_sub_4">
-                                                                                                                                            <center>
-                                                                                                                                            <h2>Subcribe Us</h2>
-                                                                                                                                            <input type="text" name="subs" placeholder="Write your email" class="subs">
-                                                                                                                                            <input type="submit" name="subs"class="sub-btn">
-                                                                                                                                             <p class="p">Enter your email for get notification by us</p>
-                                                                                                                                          </center>
-                                                                                                                                          </div>
-                                                                                                                                        </div>
-                                                                                                                                      </div>                                                           
+                             </div>    <div id="footer">
+                <div class="container">
+                  <div class="footer_sub_1">
+                    
+                    <h2>Mail Us:</h2>
+               
+                    <p class="p"Style="background-color:black">Mail Us:
+                            Hashlanka Internet Pvt Ltd Block B (Galle),
+
+                            Ground Floor, Embassy Tech Village,
+
+                            Outer Ring Road, Devarabeesanahalli Village,
+
+                            Varthur Hobli, Bengaluru East Taluk,
+
+                            Bengaluru District,
+
+                            Galle, Srilanka, 560103. <span><a href="#">read more..</a></span>
+                     </p>
+
                     </div>
+                  <div class="footer_sub_2">
+                    <center>
+                      <h2>Important Links</h2>
+                      <ul Style="background-color:black">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Deals</a></li>
+                        <li><a href="#">products</a></li>
+                        <li><a href="#">Order</a></li>
+                      </ul>
+                    </center>
+                  </div>
+                  <div class="footer_sub_3">
+                      <center>
+                          <h2>Social Links</h2>
+                          <ul Style="background-color:black">
+                            <li><a href="https://www.facebook.com/hashika.maduranga">Facebook</a></li>
+                            <li><a href="#">Google</a></li>
+                            <li><a href="#">Youtube</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Linkedin</a></li>
+                            <li><a href="#">Blogger</a></li>
+                            <li><a href="#">Watssapp</a></li>
+                            <li><a href="#">Viber</a></li>
+                          </ul>
+                        </center>
+                  </div>
+                  <form method="post" action="shopping new.php">
+                  <div class="footer_sub_4">
+                    <center>
+                    <h2>Subcribe Us</h2>
+                    <input type="text" name="subs" placeholder="Write your email" class="subs">
+                    <input type="submit" name="subs"class="sub-btn"name="register_btn">
+                     <p1 class="p">Enter your email for get notification by us</p1>
+                  </center>
+                  </div>
+              </form>
+                </div>
+              </div>
     </body>
 </html>
