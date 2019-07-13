@@ -308,7 +308,7 @@ else{
     
   
      <!---first catbox-->
-    <a href="popular.html">
+    <a href="shirts1.php">
         <div class="catbox">
             <img src="shirts/sh1.jpg " height="400px" alt="bag">
             <span>Shirts <b>20%</b></span>

@@ -57,7 +57,7 @@ if(isset($_GET["action"])){
         <link href="webcss.css" type="text/css" rel="stylesheet">
     </head>
     <body>
-    <ul style="background: brown">
+    <ul style="background-color: rgb(82, 4, 4);">
                     <img src="Ca.PNG " height="60px" width="150px">
                     <img src="Capture.PNG " height="60px" width="250px">
                     

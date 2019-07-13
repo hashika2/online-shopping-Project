@@ -17,7 +17,7 @@ if(isset($_POST["add_to_cart"])){
         else
         {
             echo'<script>alert("Item Already Added")</script>';
-            echo '<script>window.location="Cart2.php"</script>';
+            echo '<script>window.location="popular.php"</script>';
 
 
         }
@@ -42,7 +42,7 @@ if(isset($_GET["action"])){
             {
                 unset($_SESSION["shopping_cart"][$keys]);
                 echo '<script>alert("Item Removed")</script>';
-                echo '<script>window.location="Cart2.php"</script>';
+                echo '<script>window.location="popular.php"</script>';
             }
         }
     }
@@ -53,6 +53,7 @@ if(isset($_GET["action"])){
 <html>
     <head>
             <title>shirts design</title>
+             <link rel="stylesheet"  href="Cart.css">
             <link href="webcss.css" type="text/css" rel="stylesheet">
             <style>
               .prod-box{
@@ -62,7 +63,7 @@ if(isset($_GET["action"])){
     </head>
     
     <body>
-            <ul style="background: brown">
+            <ul style="background-color: rgb(82, 4, 4);">
                     <a href="shoppingnew.php"><img src="Ca.PNG " height="60px" width="150px"></a>
                     <img src="Capture.PNG " height="60px" width="250px">
                     
@@ -81,6 +82,7 @@ if(isset($_GET["action"])){
                 while($row = mysqli_fetch_array($result))
                 {
                     ?>
+                    <div class="ca2">
                     <form method="post" action="popular.php?action=add&id=<?php echo $row["id"]; ?>">
                     <div class="prod-container">
                                 <!--first product-->
@@ -95,12 +97,14 @@ if(isset($_GET["action"])){
                                         <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?> ">
                                         <input type="hidden"  name="hidden_price" value="<?php echo $row["price"]; ?>">
                                          <br>   
-                                        <input type="button"value="add to cart">  
+                                       <button type="submit" name="add_to_cart" >Add to cart </button>
+
                                 </div>                   
                                     </div>
                             </div>
                 </div>  
                 </form>
+                </div>
                 <?php
                 }
             }
