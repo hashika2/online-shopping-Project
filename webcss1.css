@@ -1,0 +1,91 @@
+ ul {
+     background-color: rgb(82, 4, 4);
+     padding: 2%;
+
+
+ }
+
+ .input {
+     width: 50%;
+ }
+
+ p {
+
+     background-color: rgb(70, 10, 10);
+     color: rgb(145, 192, 233);
+ }
+
+ .slideshow-container {
+     max-width: 100%;
+     position: center;
+     margin: auto;
+
+
+
+ }
+
+ .dropdown {
+     width: 223px;
+     border-radius: 10px;
+ }
+
+ .container {
+     margin-left: 110px;
+
+ }
+
+ #hd a {
+     float: right;
+ }
+
+ .input {
+     border-radius: 10px;
+ }
+
+ button {
+     border-radius: 10px;
+ }
+
+ .catbox {
+     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+     text-align: center;
+     font-family: arial;
+     background-size: 20px;
+     width: 307px;
+     height: auto;
+     margin-left: 20px;
+     margin-right: 90px;
+
+ }
+
+.button {
+     border: none;
+     outline: 0;
+     padding: 12px;
+     color: white;
+     background-color: #000;
+     text-align: center;
+     cursor: pointer;
+     width: 100%;
+     font-size: 18px;
+ }
+
+
+
+ .catbox span {
+     font-size: 20px;
+     color: yellow;
+ }
+
+ .bttn {
+     float: right;
+     margin: 10PX;
+     width: 100px;
+     height: 40px;
+     background-color: rgb(114, 119, 114);
+ }
+
+ .list #wrapper #hd #subhd .container a:hover {
+     width: 30px;
+     height: 10px;
+ }

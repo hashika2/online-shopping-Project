@@ -28,7 +28,7 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
        $message="you have successfully logged ".$row['username'];
          echo "<script type='text/javascript'>alert('$message');</script>";
 
-       header('location:shoppingnew.php');
+       header('location:shoppingBag.php');
          echo'<script>alert("Item Already Added")</script>';
     }
     else{
@@ -155,7 +155,7 @@ h1{
 <div class="loginbox">
 		
 		<h2>Sign In Here</h2>
-		<form action="sign_in.php" method="post">
+		<form action="shoppingbaglogin.php" method="post">
 			<p>username</p>
 			<input type="text" name="username" placeholder="username">
             <p>password</p>

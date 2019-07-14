@@ -21,93 +21,8 @@ $q = $_GET['q'];
 
     </head>
     <link href="webcss.css" type="text/css" rel="stylesheet">
+     <link href="webcss1.css" type="text/css" rel="stylesheet">
     <style>
-    
-    ul{
-      background-color: rgb(82, 4, 4);
-      padding:2%;
-
-
-    }
-    .input{
-      width: 50%;
-    }
-    p{
-
-      background-color: rgb(70, 10, 10);
-      color: rgb(145, 192, 233);
-}
-.slideshow-container{
-    max-width: 100%;
-    position: center;
-    margin: auto;
-
-
-
-}
-.dropdown{
-    width: 223px;
-    border-radius:10px; 
-}
-.container{
-  margin-left:110px;
-  
-}
-
-#hd a{
-    float:right;
-}
-.input{
-  border-radius:10px;
-}
-button{
-  border-radius:10px;
-}
-.catbox{
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  text-align: center;
-  font-family: arial;
-  background-size: 20px;
-  width: 307px;
-  height: auto;
-  margin-left: 20px;
-  margin-right: 90px;
-
-}
-
-
-
-
-
-
-. button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #000;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-
-
-.catbox span{
-  font-size:20px;
-  color:yellow;
-}
-.bttn{
-  float: right;
-  margin: 10PX;
-  width: 100px;
-  height: 40px;
-  background-color: rgb(114, 119, 114);
-}
-
-
-
       </style>
     <body>
 
@@ -117,12 +32,12 @@ button{
         <div id="hd">
           <div id="subhd">
             <div class="container">
-              <p>Sri Lankan fastest online shopiinng service    <a href="#"><img src="logo1.jpg "width="20px;" width="5px"></a>
+              <p>Sri Lankan fastest online shopiinng service    <a href="#"><img src="logo1.jpg "width="20px;"height="20px"></a>
 
-              <a href="https://www.facebook.com/hashika.maduranga"><img src="logo2.jpg "width="20px;" width="5px"></a>
-              <a href="#"><img src="logo3.jpg "width="20px;" width="5px"></a>
-              <a href="#"><img src="logo6.jpg "width="20px;" width="5px"></a>
-              <a href="#"><img src="logo5.jpg "width="20px;" width="5px"></a></p>
+              <a href="https://www.facebook.com/hashika.maduranga"><img src="logo2.jpg "width="20px;" height="20px"></a>
+              <a href="#"><img src="logo3.jpg "width="20px;"height="20px"></a>
+              <a href="#"><img src="logo6.jpg "width="20px;" height="20px"></a>
+              <a href="#"><img src="logo5.jpg "width="20px;"height="20px"></a></p>
 </div>
 
           </div>
@@ -235,7 +150,7 @@ else{
         <a href="#">For women</a>
         <a href="#">New models</a>
         <a href="#">Simple ones</a>
-        <a href="#">Popular ones</a>
+        <a href="shirts1.php">Popular ones</a>
       </div>
     </li>
     <li class="dropdown">
@@ -295,7 +210,7 @@ else{
         <a href="babies.html">Babies</a>
         <a href="older.html">olders</a>
         <a href="modern.html">Modern shirts</a>
-        <a href="popular.html">popular</a>
+        <a href="shirts1.php">popular</a>
       </div></li>
 
 </ul>
@@ -315,7 +230,7 @@ else{
           </div>
     </a>
      <!---seecond catbox-->
-    <a href="shopping.html">
+    <a href="shoppingbaglogin.php">
         <div class="catbox">
             <img src=" bags/bg1.jpg " height="400px" alt="bag">
             <span>Bags <b>20%</b></span>

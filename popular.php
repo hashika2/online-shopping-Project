@@ -76,7 +76,7 @@ if(isset($_GET["action"])){
                     </ul>
                 <!--products-->
                 <?php
-             $query = "SELECT * FROM cart WHERE id >=7";
+             $query = "SELECT * FROM cart WHERE id >=7 and id <25";
             $result =  mysqli_query($connection,$query);
             if(mysqli_num_rows($result)>0){
                 while($row = mysqli_fetch_array($result))
@@ -142,7 +142,7 @@ if(isset($_GET["action"])){
 
                     <tr>
                         <td colspan="3" aling="right"><b>Total</b></td>
-                        <td aling="right"><b>Rs.<?php echo number_format($total,2);?></b></td>
+                        <td aling="right"><b>$.<?php echo number_format($total,2);?></b></td>
                     </tr>
                     <?php
                     }
