@@ -32,7 +32,7 @@ $q = $_GET['q'];
         <div id="hd">
           <div id="subhd">
             <div class="container">
-              <p>Sri Lankan fastest online shopiinng service    <a href="#"><img src="logo1.jpg "width="20px;"height="20px"></a>
+              <p>Sri Lankan fastest online shopiinng service  <a href="#"><img src="logo1.jpg "width="20px;"height="20px"></a>
 
               <a href="https://www.facebook.com/hashika.maduranga"><img src="logo2.jpg "width="20px;" height="20px"></a>
               <a href="#"><img src="logo3.jpg "width="20px;"height="20px"></a>
@@ -43,7 +43,7 @@ $q = $_GET['q'];
           </div>
       </div>
 </div>
-         <form action="shoppingnew.php"  method="post" id="searchform">
+        <form action="shoppingnew.php"  method="post" id="searchform">
         <img src="Ca.PNG " height="60px" width="150px">
         <img src="Capture.PNG " height="60px" width="250px">
 
@@ -64,7 +64,7 @@ $query=mysqli_query($connect,"SELECT * from product where title like '%$q%'");
 $num_rows=mysqli_num_rows($query);
 ?>
 <p> <strong><?php echo $num_rows; ?></strong> results for '<?php echo $q ?>'</p>
-<!--<?php
+<?php
 
 while($row=mysqli_fetch_array($query)){
   $id=$row['id'];
@@ -76,7 +76,7 @@ while($row=mysqli_fetch_array($query)){
 }
 }
 
- ?>-->
+ ?>
 </body>
 </html>
 <?php
@@ -237,7 +237,7 @@ else{
           </div>
     </a>
      <!---third catbox-->
-    <a href="samsung.html">
+    <a href="samsunglogin.php">
         <div class="catbox">
             <img src=" phones/pn1.jpg " height="400px" alt="bag">
             <span>Smart phones <b>15%</b></span>
