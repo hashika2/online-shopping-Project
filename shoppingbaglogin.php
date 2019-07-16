@@ -22,9 +22,9 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
     $result=mysqli_query($connect,"select * from user where username='$username' and password='$password'") or die("failed to query database ".mysqli_eror());
     //$result=mysqli_query($connect,$sql);
     $row=mysqli_fetch_array($result);
-    if(mysqli_num_rows>0)
+    if(mysqli_num_rows($result)>0)
     echo 'username already exit';
-    if($row['username']==$username && $row['password'==$password]){
+    if($row['username']==$username && $row['password']==$password){
        $message="you have successfully logged ".$row['username'];
          echo "<script type='text/javascript'>alert('$message');</script>";
 
@@ -32,7 +32,7 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
          echo'<script>alert("Item Already Added")</script>';
     }
     else{
-        echo "you are not login";
+        echo "<h2>you are not login</h2>";
     }
   }
    
@@ -67,12 +67,13 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
  ?>
 <div class="loginbox">
 		
-		<h2>Sign In Here</h2>
+        <h2>Sign In Here</h2>
+        
 		<form action="shoppingbaglogin.php" method="post">
 			<p>username</p>
-			<input type="text" name="username" placeholder="username">
+			<input type="text" name="username" placeholder="username" required>
             <p>password</p>
-			<input type="password" name="password" placeholder="password">
+			<input type="password" name="password" placeholder="password" required>
 			<input type="submit" name="" value="Login">
 			<a href="">Lost your password?</a><br>
 			<a href=""> Don't have an account?</a>

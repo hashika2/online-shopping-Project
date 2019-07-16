@@ -23,8 +23,8 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
   
     $row=mysqli_fetch_array($result);
      if(mysqli_num_rows($result)>0)
-    echo 'username already exit';
-    if($row['username']==$username && $row['password'==$password]){
+         echo 'username already exit';
+    if($row['username']==$username && $row['password']==$password){
        $message="you have successfully logged ".$row['username'];
          echo "<script type='text/javascript'>alert('$message');</script>";
 
