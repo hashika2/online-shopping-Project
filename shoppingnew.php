@@ -23,6 +23,10 @@ $q = $_GET['q'];
     <link href="webcss.css" type="text/css" rel="stylesheet">
      <link href="webcss1.css" type="text/css" rel="stylesheet">
     <style>
+      *{
+    padding: 0%;
+    margin:0%;
+}
       </style>
     <body>
 
