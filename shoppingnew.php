@@ -229,7 +229,7 @@ else{
      <!---first catbox-->
     <a href="shirts1.php">
         <div class="catbox">
-            <img src="shirts/sh1.jpg " height="400px" alt="bag">
+            <img src="shirts/pp7.jpg " height="400px" alt="bag">
             <span>Shirts <b>20%</b></span>
           </div>
     </a>
@@ -255,7 +255,7 @@ else{
           </div>
     </a>
     <!---five catbox-->
-    <a href="wedding.html">
+    <a href="sarrieslogin.php">
         <div class="catbox">
             <img src=" sari/sari1.jpg " height="400px" alt="bag">
             <span>Sarri <b>25%</b></span>
