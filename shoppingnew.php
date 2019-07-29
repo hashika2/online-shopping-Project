@@ -36,20 +36,20 @@ $q = $_GET['q'];
         <div id="hd">
           <div id="subhd">
             <div class="container">
-              <p>Sri Lankan fastest online shopiinng service  <a href="#"><img src="logo1.jpg "width="20px;"height="20px"></a>
+              <p>Sri Lankan fastest online shopiinng service  <a href="#"><img src="images/logo1.jpg "width="20px;"height="20px"></a>
 
-              <a href="https://www.facebook.com/hashika.maduranga"><img src="logo2.jpg "width="20px;" height="20px"></a>
-              <a href="#"><img src="logo3.jpg "width="20px;"height="20px"></a>
-              <a href="#"><img src="logo6.jpg "width="20px;" height="20px"></a>
-              <a href="#"><img src="logo5.jpg "width="20px;"height="20px"></a></p>
+              <a href="https://www.facebook.com/hashika.maduranga"><img src="images/logo2.jpg "width="20px;" height="20px"></a>
+              <a href="#"><img src="images/logo3.jpg "width="20px;"height="20px"></a>
+              <a href="#"><img src="images/logo6.jpg "width="20px;" height="20px"></a>
+              <a href="#"><img src="images/logo5.jpg "width="20px;"height="20px"></a></p>
 </div>
 
           </div>
       </div>
 </div>
         <form action="shoppingnew.php"  method="post" id="searchform">
-        <img src="Ca.PNG " height="60px" width="150px">
-        <img src="Capture.PNG " height="60px" width="250px">
+        <img src="images/Ca.PNG " height="60px" width="150px">
+        <img src="images/Capture.PNG " height="60px" width="250px">
 
 
             <li class><a href="sign_in.php">sign in</a></li>
@@ -98,25 +98,25 @@ else{
 
           <div class="mySlides fade">
             <div class="numbertext"></div>
-            <img src="sh6.jpg "height="500px" style="width:100%;">
+            <img src="images/sh6.jpg "height="500px" style="width:100%;">
             <div class="text"></div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext"></div>
-            <img src="sh2.jpg"height="500px" style="width:100%">
+            <img src="images/sh2.jpg"height="500px" style="width:100%">
             <div class="text"></div>
           </div>
 
           <div class="mySlides fade">
             <div class="numbertext"></div>
-            <img src="B.jpg" height="500px"style="width:100%">
+            <img src="images/ph3.jpg" height="500px"style="width:100%">
             <div class="text"></div>
           </div>
 
           <div  class="mySlides fade">
             <div class="numbertext"></div>
-            <img src="A.jpg"height="500px" style="width:100%">
+            <img src="images/ph2.jpg"height="500px" style="width:100%">
             <div class="text"></div>
           </div>
 
@@ -295,13 +295,13 @@ else{
       
        <!--offers  boxes -->
       <div class="offers">
-        <a href="#"><img src="offer2.jpg" height="210px"style="margin-left:50px;"></a><!--no same size of all pictures thats why marigns are different-->
+        <a href="#"><img src="images/offer2.jpg" height="210px"style="margin-left:50px;"></a><!--no same size of all pictures thats why marigns are different-->
       </div>
       <div class="offers">
-          <a href="#"><img src="offer6.jpg" height="210px"style="margin-left:80px;"></a>
+          <a href="#"><img src="images/offer6.jpg" height="210px"style="margin-left:80px;"></a>
         </div>
         <div class="offers">
-            <a href="#"><img src="offer4.jpg" height="210px"style="margin-left:110px;"></a>
+            <a href="#"><img src="images/offer4.jpg" height="210px"style="margin-left:110px;"></a>
           </div>
       </div>
 

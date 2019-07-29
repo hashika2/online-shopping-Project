@@ -1,3 +1,4 @@
+
 <?php
 session_start();
 $connection = mysqli_connect('localhost','root','','testing');
@@ -59,6 +60,7 @@ if(isset($_GET["action"])){
               .prod-box{
                 margin-left: 80px;
               }
+              
             </style>
     </head>
     
@@ -76,7 +78,7 @@ if(isset($_GET["action"])){
                     </ul>
                 <!--products-->
                 <?php
-             $query = "SELECT * FROM cart WHERE id >=7 and id <25";
+             $query = "SELECT * FROM cart WHERE id >=59 and id <65";
             $result =  mysqli_query($connection,$query);
             if(mysqli_num_rows($result)>0){
                 while($row = mysqli_fetch_array($result))
@@ -87,11 +89,11 @@ if(isset($_GET["action"])){
                     <div class="prod-container">
                                 <!--first product-->
                             <div class="prod-box" >
-                                    <img src="shirts/<?php echo $row["image"]; ?>" height="300px" alt="man suit">
+                                    <img src="sari/<?php echo $row["image"]; ?>" height="300px" alt="man suit">
                                     <h5 style="color:black;font-size:20px;"><?php echo $row["name"]; ?></h5>
                                     <div class="prod-trans">
                                     <div class="prod-feature">
-                                        <p>men special</p>
+                                        <p>girls special</p>
                                         <p style="color:white ;font-weight:bold">$<?php echo $row["price"] ; ?></p>  
                                         <input type="text" name="quantity"  value="1">
                                         <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?> ">
