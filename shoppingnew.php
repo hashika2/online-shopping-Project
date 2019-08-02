@@ -137,7 +137,7 @@ else{
 
       </div>
       <div class="heading">
-        <h2 style="font-size:40px; background-color:red">Category</h2>
+        <span style="font-size:40px; color:red;margin-left:40%">Category</span>
       </div>
       <div class="container">
 
@@ -289,7 +289,7 @@ else{
 
   <!--offers -->
   <div id="heading">
-        <h2 style="font-size:40px; background-color:red">Offers</h2>
+        <span style="font-size:40px; color:red;margin-left:40%">Offers</span>
       </div>
   <div class="container">
       
