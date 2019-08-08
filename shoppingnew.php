@@ -6,7 +6,7 @@ if($_GET['q']=='search...'){
 }
 
 if($_GET['q']!==''){
-$connect=mysqli_connect('localhost','root','','searchbar');
+$connect=include_once("connection.php");
 //$db=mysqli_select_db($connect,'searchbar ')
 $q = $_GET['q'];
 
