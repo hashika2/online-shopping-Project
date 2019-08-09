@@ -67,8 +67,8 @@ if(isset($_GET["action"])){
     
     <body>
             <ul style="background-color: rgb(82, 4, 4);">
-                    <a href="shoppingnew.php"><img src="Ca.PNG " height="60px" width="150px"></a>
-                    <img src="Capture.PNG " height="60px" width="250px">
+                    <a href="shoppingnew.php"><img src="images/Ca.PNG " height="60px" width="150px"></a>
+                    <img src="images/Capture.PNG " height="60px" width="250px">
                     
                         <li class="active"><a href="#home">logout</a></li>
                         <li class><a href="service.html">service</a></li>

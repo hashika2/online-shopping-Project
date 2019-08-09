@@ -60,7 +60,7 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
 
 
 <div class ="header">
-        <h1><b> Sign to <a href="shoppingnew.php">HASHLANKA</a> </b></h1>
+        <h1><b> Sign to <a href="shoppingnew.php" style="text-decoration:none; color:white">HASHLANKA</a> </b></h1>
 
 </div>
 <?php

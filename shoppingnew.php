@@ -1,4 +1,5 @@
 <!--<?php
+session_start();
 if(isset($_GET['q'])){
 if($_GET['q']=='search...'){
   header('location:shoppingnew.php');
@@ -219,7 +220,12 @@ else{
 
 </ul>
 
-
+<!-- <?php 
+  $var1=1;
+  $_SESSION['var']=$var1;
+  $set=$_SESSION['var'];
+  
+?> -->
 
 
 <!---catagory-->
@@ -227,7 +233,7 @@ else{
     
   
      <!---first catbox-->
-    <a href="shirts1.php">
+    <a href="shirts1.php?" >
         <div class="catbox">
             <img src="shirts/pp7.jpg " height="400px" alt="bag">
             <span>Shirts <b>20%</b></span>
@@ -235,6 +241,7 @@ else{
     </a>
      <!---seecond catbox-->
     <a href="shoppingbaglogin.php">
+        
         <div class="catbox">
             <img src=" bags/bg1.jpg " height="400px" alt="bag">
             <span>Bags <b>20%</b></span>
