@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connection = mysqli_connect('localhost','root','','testin');
+$connection = mysqli_connect('localhost','root','','testing');
 if(isset($_POST["add_to_cart"])){
     if(isset($_SESSION["shopping_cart"])){
         $item_array_id = array_column($_SESSION["shopping_cart"],"item_id");
@@ -17,7 +17,7 @@ if(isset($_POST["add_to_cart"])){
         else
         {
             echo'<script>alert("Item Already Added")</script>';
-            echo '<script>window.location="samsung.php"</script>';
+            echo '<script>window.location="watch.php"</script>';
 
 
         }
@@ -42,7 +42,7 @@ if(isset($_GET["action"])){
             {
                 unset($_SESSION["shopping_cart"][$keys]);
                 echo '<script>alert("Item Removed")</script>';
-                echo '<script>window.location="samsung.php"</script>';
+                echo '<script>window.location="watch.php"</script>';
             }
         }
     }
@@ -78,18 +78,18 @@ if(isset($_GET["action"])){
   </ul>
   <!--products-->
   <?php
-             $query = "SELECT * FROM cart WHERE id >0";
+             $query = "SELECT * FROM cart WHERE id >=51 and id <59";
             $result =  mysqli_query($connection,$query);
             if(mysqli_num_rows($result)>0){
                 while($row = mysqli_fetch_array($result))
                 {
                     ?>
   <div class="ca2">
-    <form method="post" action="samsung.php?action=add&id=<?php echo $row["id"]; ?>">
+    <form method="post" action="watchs.php?action=add&id=<?php echo $row["id"]; ?>">
       <div class="prod-container">
         <!--first product-->
         <div class="prod-box">
-          <img src="phones/<?php echo $row["image"]; ?>" height="300px" alt="man suit">
+          <img src="shoes/<?php echo $row["image"]; ?>" height="300px" alt="man suit">
           <h5 style="color:black;font-size:20px;"><?php echo $row["name"]; ?></h5>
           <div class="prod-trans">
             <div class="prod-feature">
@@ -134,7 +134,7 @@ if(isset($_GET["action"])){
         <td><?php echo $values["item_quantity"]; ?></td>
         <td>$.<?php echo $values["item_price"]; ?></td>
         <td><?php  echo number_format ($values["item_quantity"]*$values["item_price"],2); ?></td>
-        <td><a href="samsung.php?action=delete&id=<?php echo $values["item_id"];?>"><span class="re">Remove</span></a>
+        <td><a href="watch.php?action=delete&id=<?php echo $values["item_id"];?>"><span class="re">Remove</span></a>
         </td>
 
       </tr>

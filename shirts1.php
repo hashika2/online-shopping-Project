@@ -71,7 +71,7 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
 <div class="loginbox">
 		
 		<h2>Sign In Here</h2>
-		<form action="shirts1.php" method="post">
+		<form action="shirts1.php?action=$username" method="post">
 			<p>username</p>
 			<input type="text" name="username" placeholder="username"required>
             <p>password</p>
