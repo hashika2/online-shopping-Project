@@ -27,7 +27,13 @@ $q = $_GET['q'];
       *{
     padding: 0%;
     margin:0%;
-}
+       }
+       .dropdown{
+         width:180px;
+       }
+       /* .offers a img{
+         margin-left:20px;
+       } */
       </style>
     <body>
 
@@ -302,13 +308,13 @@ else{
       
        <!--offers  boxes -->
       <div class="offers">
-        <a href="#"><img src="images/offer2.jpg" height="210px"style="margin-left:50px;"></a><!--no same size of all pictures thats why marigns are different-->
+        <a href="#"><img src="images/offer2.jpg" height="210px" style="margin-left:50px;"></a><!--no same size of all pictures thats why marigns are different-->
       </div>
       <div class="offers">
-          <a href="#"><img src="images/offer6.jpg" height="210px"style="margin-left:80px;"></a>
+          <a href="#"><img src="images/offer6.jpg" height="210px" style="margin-left:50px;"></a>
         </div>
         <div class="offers">
-            <a href="#"><img src="images/offer4.jpg" height="210px"style="margin-left:110px;"></a>
+            <a href="#"><img src="images/offer4.jpg" height="210px"style="margin-left:50px;"></a>
           </div>
       </div>
 
@@ -374,7 +380,7 @@ else{
                 </div>
               </div>
 
-              <?php
+              <!-- <?php
 
 $email=filter_input(INPUT_POST,'email');
 
@@ -400,7 +406,7 @@ else{
     }
     $conn->close();
 }
-?>
+?> -->
 
 
 
