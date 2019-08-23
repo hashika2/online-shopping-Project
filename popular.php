@@ -1,6 +1,10 @@
 <?php
 session_start();
-$connection = mysqli_connect('localhost','root','','testing');
+
+if(!isset($_SESSION['user-id'])){
+    header('Location:shirts1.php');
+}
+$connection = mysqli_connect('localhost','root','','testin');
 if(isset($_POST["add_to_cart"])){
     if(isset($_SESSION["shopping_cart"])){
         $item_array_id = array_column($_SESSION["shopping_cart"],"item_id");
@@ -76,7 +80,7 @@ if(isset($_GET["action"])){
                     </ul>
                 <!--products-->
                 <?php
-             $query = "SELECT * FROM cart WHERE id >=7 and id <25";
+             $query = "SELECT * FROM cart WHERE id >=5 and id <13";
             $result =  mysqli_query($connection,$query);
             if(mysqli_num_rows($result)>0){
                 while($row = mysqli_fetch_array($result))
