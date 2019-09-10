@@ -1,4 +1,4 @@
-<?php $connect=mysqli_connect('localhost','root','','searchbar');
+<?php $connect=mysqli_connect('localhost','root','','testin');
 if($connect){
     
 }

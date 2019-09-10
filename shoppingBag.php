@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connection = mysqli_connect('localhost','root','','testing');
+$connection = mysqli_connect('localhost','root','','testin');
 if(isset($_POST["add_to_cart"])){
     if(isset($_SESSION["shopping_cart"])){
         $item_array_id = array_column($_SESSION["shopping_cart"],"item_id");

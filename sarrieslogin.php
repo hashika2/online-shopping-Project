@@ -1,12 +1,9 @@
 <?php
 
 
-$dbserver="localhost";
-$user="root";
-$pass="";
-$db="test";
+$connect=include_once("connection.php");
 
-$connect=mysqli_connect($dbserver,$user,$pass,$db);
+
 
   $error=array( );
    if(isset($_POST['username'])){

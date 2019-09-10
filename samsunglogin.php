@@ -2,7 +2,7 @@
 $dbserver="localhost";
 $user="root";
 $pass="";
-$db="test";
+$db="testin";
 
 $connect=mysqli_connect($dbserver,$user,$pass,$db);
 
@@ -22,6 +22,8 @@ $connect=mysqli_connect($dbserver,$user,$pass,$db);
     $result=mysqli_query($connect,"select * from user where username='$username' and password='$password'") or die("failed to query database ".mysqli_eror());
   
     $row=mysqli_fetch_array($result);
+
+    $_SESSION['user-id']=$row['id']; //create a session variable 
      if(mysqli_num_rows($result)>0)
          echo 'username already exit';
     if($row['username']==$username && $row['password']==$password){

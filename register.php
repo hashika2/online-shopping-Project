@@ -7,7 +7,7 @@ $password=filter_input(INPUT_POST,'password');
 $host="localhost";
 $dbname1="root";
 $dbpassword="";
-$dbname="test";
+$dbname="testin";
 
 $conn=new mysqli($host,$dbname1,$dbpassword,$dbname);
 
@@ -15,7 +15,7 @@ if(mysqli_connect_error()){
     die('connect error('.mysqli_connect_errno().') '.mysqli_connect_error());
 }
 else{
-    $sql="INSERT INTO user(username,email,password) VALUES('$username','$email','$password')";
+    $sql="INSERT INTO user1(username,email,password) VALUES('$username','$email','$password')";
 
     if($conn->query($sql)===TRUE){
      /* $message= "new record inserted succsesful";
@@ -138,12 +138,12 @@ h1{
 		<h1>Login Here</h1>
 		<form action ="register.php" method="post">
 			<p>username</p>
-			<input type="text" name="username" placeholder="username">
+			<input type="text" name="username" placeholder="username" required>
       <p>email</p>
-      <input type="text" name="email" placeholder="email">
+      <input type="text" name="email" placeholder="email" required>
      
 			<p>password</p>
-			<input type="password" name="password" placeholder="password">
+			<input type="password" name="password" placeholder="password" required>
 			<input type="submit" name="" value="Login">
 			<a href="">Lost your password?</a><br>
 			<a href=""> Don't have an account?</a>

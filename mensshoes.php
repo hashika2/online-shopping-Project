@@ -1,6 +1,6 @@
 <?php
 session_start();
-$connection = mysqli_connect('localhost','root','','testing');
+$connection = mysqli_connect('localhost','root','','testin');
 if(isset($_POST["add_to_cart"])){
     if(isset($_SESSION["shopping_cart"])){
         $item_array_id = array_column($_SESSION["shopping_cart"],"item_id");
@@ -65,8 +65,8 @@ if(isset($_GET["action"])){
 
 <body>
   <ul style="background-color: rgb(82, 4, 4);">
-    <a href="shoppingnew.php"><img src="Ca.PNG " height="60px" width="150px"></a>
-    <img src="Capture.PNG " height="60px" width="250px">
+    <a href="shoppingnew.php"><img src="images/Ca.PNG " height="60px" width="150px"></a>
+    <img src="images/Capture.PNG " height="60px" width="250px">
 
     <li class="active"><a href="#home">logout</a></li>
     <li class><a href="service.html">service</a></li>
