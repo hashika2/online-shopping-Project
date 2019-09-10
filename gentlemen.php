@@ -1,4 +1,4 @@
-<?php
+<!-- <?php
 session_start();
 $connection = mysqli_connect('localhost','root','','testin');
 if(isset($_POST["add_to_cart"])){
@@ -47,7 +47,7 @@ if(isset($_GET["action"])){
         }
     }
 }
-?>
+?> -->
 
 <!DOCTYPE html>
 <html>
@@ -80,7 +80,7 @@ if(isset($_GET["action"])){
                     ?>
 
             <div class="ca2">
-            <form method="post" action="gentlemen.php?action=add&id=<?php echo $row["id"]; ?>">
+            <form method="post" action="cartinfo.php?action=add&id=<?php echo $row["id"]; ?>">
                 <div class="ca3" style="margin-left:50px;width:250px;height:500px" >
                     <img src="watch/<?php echo $row["image"]; ?>" style="width:200px; height:250px;" >
                     <h5 style="color:black;font-size:20px;"><?php echo $row["name"]; ?></h5>
@@ -112,7 +112,7 @@ if(isset($_GET["action"])){
                     <th width="5%">Action</th>
 
                 </tr    >
-                <?php
+                <!-- <?php
                     if(!empty($_SESSION["shopping_cart"])){
                         $total = 0;
                     foreach($_SESSION["shopping_cart"] as $key => $values)
@@ -144,7 +144,7 @@ if(isset($_GET["action"])){
 
 
 
-            </div>
+            </div> -->
 
 
         </div>
