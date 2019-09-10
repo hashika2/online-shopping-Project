@@ -3,17 +3,17 @@
 $email=filter_input(INPUT_POST,'email');
 
 $host="localhost";
-$dbname="hashika";
+$lhname="root";
 $dbpassword="";
-$dbname="test";
+$dbname="testin";
 
-$conn=new mysqli($host,$dbname,$dbpassword,$dbname);
-//$conn=mysqli_connect('localhost','root','','test');
+$conn=new mysqli($host,$lhname,$dbpassword,$dbname);
+
 if(mysqli_connect_error()){
     die('connect error('.mysqli_connect_errno().') '.mysqli_connect_error());
 }
 else{
-    $sql="INSERT INTO emai(email) VALUES('$email')";
+    $sql="INSERT INTO email VALUES('$email')";
 
     if($conn->query($sql)===TRUE){
         echo "new record inserted succsesful";
