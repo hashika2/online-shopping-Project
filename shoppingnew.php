@@ -283,14 +283,14 @@ else{
           </div>
     </a>
     <!---seven catbox-->
-    <a href="gentlemen.html">
+    <a href="gentlemen.php">
         <div class="catbox">
             <img src=" watch/wch1.jpg " height="400px" alt="bag">
             <span>watches <b>30%</b></span>
           </div>
     </a>
     <!---eight catbox-->
-    <a href="men.html">
+    <a href="menspec.php">
         <div class="catbox">
             <img src=" spectacles/sp1.jpg " height="400px" alt="bag">
             <span>spectacles <b>10%</b></span>

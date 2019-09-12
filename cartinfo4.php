@@ -18,9 +18,10 @@
                       <input class="input" type="text"placeholder ="search.."style="  border-radius:10px;width:800px" ><button type="submit"style="  border-radius:10px;">search</button>
                     </ul>
 
+
 <?php
 session_start();
-$connection = mysqli_connect('localhost','root','','testin');
+
 if(isset($_POST["add_to_cart"])){
     if(isset($_SESSION["shopping_cart"])){
         $item_array_id = array_column($_SESSION["shopping_cart"],"item_id");
@@ -37,7 +38,7 @@ if(isset($_POST["add_to_cart"])){
         else
         {
             echo'<script>alert("Item Already Added")</script>';
-            echo '<script>window.location="cartinfo.php"</script>';
+            echo '<script>window.location="cartinfo4.php"</script>';
 
 
         }
@@ -62,57 +63,58 @@ if(isset($_GET["action"])){
             {
                 unset($_SESSION["shopping_cart"][$keys]);
                 echo '<script>alert("Item Removed")</script>';
-                echo '<script>window.location="gentlemen.php"</script>';
+                echo '<script>window.location="cartinfo4.php"</script>';
             }
         }
     }
 }
 ?>
 
- <div style="clear:both"></div>
-            <br><br><br><br>
-            <h2>Order List</h2>
-            <div class="table">
-                <table class="ta1">
-                    <tr>
-                    <th width="40%">Item Name</th>
-                    <th width="10%">Quantity</th>
-                    <th width="20%">Price</th>
-                    <th width="15%">Total</th>
-                    <th width="5%">Action</th>
 
-                </tr    >
-                <?php
+<h2>Order List</h2>
+  <div class="table">
+    <table class="ta1">
+      <tr>
+        <th width="40%">Item Name</th>
+        <th width="10%">Quantity</th>
+        <th width="20%">Price</th>
+        <th width="15%">Total</th>
+        <th width="5%">Action</th>
+
+      </tr>
+      <?php
                     if(!empty($_SESSION["shopping_cart"])){
                         $total = 0;
                     foreach($_SESSION["shopping_cart"] as $key => $values)
                     {
                      ?>
-                    <tr>
-                        <td><?php echo $values["item_name"]; ?></td>
-                        <td><?php echo $values["item_quantity"]; ?></td>
-                        <td>$.<?php echo $values["item_price"]; ?></td>
-                        <td><?php  echo number_format ($values["item_quantity"]*$values["item_price"],2); ?></td>
-                        <td><a href="cartinfo.php?action=delete&id=<?php echo $values["item_id"];?>"><span class="re">Remove</span></a></td>
+      <tr>
+        <td><?php echo $values["item_name"]; ?></td>
+        <td><?php echo $values["item_quantity"]; ?></td>
+        <td>$.<?php echo $values["item_price"]; ?></td>
+        <td><?php  echo number_format ($values["item_quantity"]*$values["item_price"],2); ?></td>
+        <td><a href="cartinfo4.php?action=delete&id=<?php echo $values["item_id"];?>"><span class="re">Remove</span></a>
+        </td>
 
-                    </tr>
-                    <?php
+      </tr>
+      <?php
                          $total=$total + ($values["item_quantity"] * $values["item_price"]);
                     }
                         ?>
 
-                    <tr>
-                        <td colspan="3" aling="right"><b>Total</b></td>
-                        <td aling="right"><b>$.<?php echo number_format($total,2);?></b></td>
-                        <td colspan="3" aling="right"><b><a href="gentlemen.php">Add</a></b></td>
-                    </tr>
-                    <?php
+      <tr>
+        <td colspan="3" aling="right"><b>Total</b></td>
+        <td aling="right"><b>$.<?php echo number_format($total,2);?></b></td>
+        <td colspan="3" aling="right"><b><a href="mensshoes.php">Add</a></b></td>
+      </tr>
+      <?php
                     }
 
                     ?>
-             </table>
+    </table>
 
 
+  </div>
 
-
-            </div>
+  </div>
+  </div>
