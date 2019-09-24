@@ -1,0 +1,29 @@
+.itemimage{
+    float: left;
+    width: 40%;
+    
+}
+.itemdetails{
+    float: right;
+    width: 60%;
+    height: 200px;
+    /* background-color: #cc2020; */
+}
+ img{
+    margin-left:50px;
+    
+}
+h5{
+    text-align: center;
+}
+.itemimage input{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
+button{
+   background-color: rgb(23, 112, 196);
+   width: 200px;
+   
+}
