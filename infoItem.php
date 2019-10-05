@@ -28,8 +28,9 @@
                     <?php 
                $connection = mysqli_connect('localhost','root','','testin');
                
+               $id=$_GET["id"];
                 if($connection){
-                    $query = "SELECT * FROM cart WHERE id=1 ";
+                    $query = "SELECT * FROM cart WHERE id=$id ";
                     $result=mysqli_query($connection,$query);
                     if(mysqli_num_rows($result)>0){
                         while($row=mysqli_fetch_array($result)){
@@ -37,7 +38,7 @@
                             <div class="itemimage">
                             <form method="post" action="cartinfo7.php?action=add&id=<?php echo $row["id"]; ?>">
                                      <h5 style="font-size:40px;"><?php echo $row["name"]; ?></h5>
-                                    <img src="phones/<?php echo $row['image']; ?>" height="400px" width="440px"> 
+                                    <img src="spectacles/<?php echo $row['image']; ?>" height="400px" width="440px"> 
                                     <p style="color:white ;font-weight:bold;text-align:center;font-size:30px">PRICE   :$<?php echo $row["price"] ; ?></p>  
                                     <input type="text" name="quantity"  value="1" style="margin-left:50px;height:40px">
                                     <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?> ">
