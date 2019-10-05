@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-            <title>shirts design</title>
+            <title>informations</title>
              <link rel="stylesheet"  href="Cart.css">
             <link href="webcss.css" type="text/css" rel="stylesheet">
             <link href="webinfo.css" type="text/css" rel="stylesheet">
@@ -9,6 +9,15 @@
               .prod-box{
                 margin-left: 80px;
               }
+              .rating{
+                float: left;
+                width: 50%;
+            }
+            .descr{
+                float: right;
+                width: 50%;
+                background-color: aliceblue;
+            }
               
             </style>
     </head>
@@ -38,7 +47,7 @@
                             <div class="itemimage">
                             <form method="post" action="cartinfo7.php?action=add&id=<?php echo $row["id"]; ?>">
                                      <h5 style="font-size:40px;"><?php echo $row["name"]; ?></h5>
-                                    <img src="spectacles/<?php echo $row['image']; ?>" height="400px" width="440px"> 
+                                    <img src="imagesA/<?php echo $row['image']; ?>" height="400px" width="440px"> 
                                     <p style="color:white ;font-weight:bold;text-align:center;font-size:30px">PRICE   :$<?php echo $row["price"] ; ?></p>  
                                     <input type="text" name="quantity"  value="1" style="margin-left:50px;height:40px">
                                     <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?> ">
@@ -57,7 +66,28 @@
             ?>
         
         <div class="itemdetails">
+            <div class="rating">
+                <h2>Details</h2>
+                <div class="detail">
+                    <h3>Reviews Form</h3>
+                    <p>tell some thing about this page</p>
+                    <p>tell some thing about this page</p>
+                    <p>tell some thing about this page</p>
+                    
+                </div>
+            </div>
+            <div class="descr">
+                <label>Name</label>
+                <input type="text" name="name"><br>
+                <label>Emai</label>
+                <input type="text" name="emai">
 
+                <h3>Your Rating</h3>
+
+                <input type="text" type="">
+                <input type="submit" name="submit">
+
+            </div>
         </div>
 
     </body>

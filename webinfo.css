@@ -23,7 +23,17 @@ p{
     text-align: center;
 }
 button{
-   background-color: rgb(23, 112, 196);
+   background-color: rgb(114, 119, 124);
    width: 200px;
    
 }
+.rating{
+    float: left;
+    width: 50%;
+}
+.descr{
+    float: right;
+    width: 50%;
+    background-color: aliceblue;
+}
+
