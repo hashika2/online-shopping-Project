@@ -13,11 +13,8 @@
                 float: left;
                 width: 50%;
             }
-            .descr{
-                float: right;
-                width: 50%;
-                background-color: aliceblue;
-            }
+            
+            
               
             </style>
     </head>
@@ -27,12 +24,12 @@
                     <a href="shoppingnew.php"><img src="images/Ca.PNG " height="60px" width="150px"></a>
                     <img src="images/Capture.PNG " height="60px" width="250px">
                     
-                        <li class="active"><a href="#home">logout</a></li>
+                       
                         <li class><a href="service.html">service</a></li>
                         <li class><a href="#">partner</a></li>
-                       
+                        <li><a href="#">login</a></li>
                       
-                      <input class="input" type="text"placeholder ="search.." style="  border-radius:10px;width:800px" ><button type="submit"style="  border-radius:10px;">search</button>
+                      <input class="input" type="text"placeholder ="search.."style="  border-radius:10px;width:800px" ><button type="submit"style="  border-radius:10px;">search</button>
                     </ul>
                     <?php 
                $connection = mysqli_connect('localhost','root','','testin');
@@ -52,7 +49,7 @@
                                     <input type="text" name="quantity"  value="1" style="margin-left:50px;height:40px">
                                     <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?> ">
                                     <input type="hidden"  name="hidden_price" value="<?php echo $row["price"]; ?>">          
-                                    <button type="submit" name="add_to_cart" style="margin-right:100px">Add to cart </button>
+                                    <input type="submit" name="add_to_cart" style="margin-right:100px; width:150px;height:40px;margin-left:130px" value="Add to cart">
 
                                 </form>
             
@@ -79,12 +76,12 @@
             <div class="descr">
                 <label>Name</label>
                 <input type="text" name="name"><br>
-                <label>Emai</label>
-                <input type="text" name="emai">
+                <label>Email</label>
+                <input type="text" name="email">
 
                 <h3>Your Rating</h3>
 
-                <input type="text" type="">
+                <textarea name="description" id="" cols="30" rows="10"></textarea><br><br>
                 <input type="submit" name="submit">
 
             </div>
