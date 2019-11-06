@@ -11,6 +11,11 @@
     .prod-box {
       margin-left: 80px;
     }
+            a button{
+                background-color:green;
+                height:32px;
+                border-radius:10px;
+              }
   </style>
 </head>
 
@@ -52,7 +57,8 @@
               <input type="hidden" name="hidden_price" value="<?php echo $row["price"]; ?>">
               <br>
               <button type="submit" name="add_to_cart">Add to cart </button>
-
+              <a href="infoItem.php?action=add&id=<?php echo $row["id"]; ?>"><button type="button" >More info </button></a>
+              
             </div>
           </div>
         </div>

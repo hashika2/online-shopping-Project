@@ -29,7 +29,7 @@
                         <li class><a href="#">partner</a></li>
                        
                       
-                      <input class="input" type="text"placeholder ="search.." style="  border-radius:10px;width:800px" ><button type="submit"style="  border-radius:10px;">search</button>
+                      <input class="input" type="text"placeholder ="search.." style="  border-radius:10px;width:500px" ><button type="submit"style="  border-radius:10px;">search</button>
                     </ul>
                 <!--products-->
                 <?php
