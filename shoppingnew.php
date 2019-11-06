@@ -21,7 +21,7 @@ $q = $_GET['q'];
      
 
     </head>
-    <link href="webcss.css" type="text/css" rel="stylesheet">
+    <link href="webcss2.css" type="text/css" rel="stylesheet">
      <link href="webcss1.css" type="text/css" rel="stylesheet">
     <style>
       *{
@@ -64,8 +64,8 @@ $q = $_GET['q'];
             <li class><a href="partner.php">partner</a></li>
             <li class><a href="register.php">sign out</a></li>
 
-          <input class="input" type="text"placeholder ="search.."name = "q" id='q1' >
-           <input  type="submit" name = "search" onclick="window.location.href='shoppingnew.php?document.getElementById('q1').value'" placeholder="Enter" class="bttn" value="search"style="  border-radius:10px;">
+          <input class="input" type="text"placeholder ="search.."name = "q" id='q1' style="width:500px" >
+           <input  type="submit" name = "search" onclick="window.location.href='shoppingnew.php?document.getElementById('q1').value'" placeholder="Enter" class="bttn" value="search"style="  border-radius:10px">
 </form>
 
 <?php
@@ -312,9 +312,12 @@ else{
         <a href="#"><img src="images/offer2.jpg" height="210px" style="margin-left:10px;"></a><!--no same size of all pictures thats why marigns are different-->
       </div>
       <div class="offers">
-          <a href="#"><img src="images/offer6.jpg" height="210px" style="margin-left:50px;"></a>
+          <a href="#"><img src="images/offer6.jpg" height="210px" style="margin-left:50px;" width="400px"></a>
         </div>
         <div class="offers">
+            <a href="#"><img src="images/offer4.jpg" height="210px"style="margin-left:10px;"></a>
+          </div>
+          <div class="offers">
             <a href="#"><img src="images/offer4.jpg" height="210px"style="margin-left:50px;"></a>
           </div>
       </div>
