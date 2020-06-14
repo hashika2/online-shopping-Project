@@ -1,32 +1,32 @@
 <?php
-$username=filter_input(INPUT_POST,'username');
-$email=filter_input(INPUT_POST,'email');
-$password=filter_input(INPUT_POST,'password');
-//$hashed_password=hash(' ',$password); doesn't work hass password
+	$username=filter_input(INPUT_POST,'username');
+	$email=filter_input(INPUT_POST,'email');
+	$password=filter_input(INPUT_POST,'password');
+	//$hashed_password=hash(' ',$password); doesn't work hass password
 
-$host="localhost";
-$dbname1="root";
-$dbpassword="";
-$dbname="testin";
+	$host="localhost";
+	$dbname1="root";
+	$dbpassword="";
+	$dbname="testin";
 
-$conn=new mysqli($host,$dbname1,$dbpassword,$dbname);
+	$conn=new mysqli($host,$dbname1,$dbpassword,$dbname);
 
-if(mysqli_connect_error()){
-    die('connect error('.mysqli_connect_errno().') '.mysqli_connect_error());
-}
-else{
-    $sql="INSERT INTO user1(username,email,password) VALUES('$username','$email','$password')";
+	if(mysqli_connect_error()){
+		die('connect error('.mysqli_connect_errno().') '.mysqli_connect_error());
+	}
+	else{
+		$sql="INSERT INTO user1(username,email,password) VALUES('$username','$email','$password')";
 
-    if($conn->query($sql)===TRUE){
-     /* $message= "new record inserted succsesful";
-          echo "<script type='text/javascript'>alert('$message');</script>";*/
-          header('Locatin:shoppingnew.php');
-    }
-    else{
-        echo "error: ".$sql."<br>".$conn->error;
-    }
-    $conn->close();
-}
+		if($conn->query($sql)===TRUE){
+			$message= "new record inserted succsesful";
+			echo "<script type='text/javascript'>alert('$message');</script>";
+			header('Location:shoppingnew.php');
+		}
+		else{
+			echo "error: ".$sql."<br>".$conn->error;
+		}
+		$conn->close();
+	}
 ?>
 
 <!DOCTYPE html>
@@ -148,7 +148,7 @@ h1{
 			<a href="">Lost your password?</a><br>
 			<a href=""> Don't have an account?</a>
 		</form>
-	</div>
+</div>
 
 </body>
 </html>

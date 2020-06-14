@@ -1,5 +1,9 @@
+<?php session_start(); ?>
 
-
+<?php if(!isset($_SESSION['user-id'])){
+  header('location:shirts1.php');
+}
+  ?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -130,3 +134,4 @@
               </div>
     </body>
 </html>
+

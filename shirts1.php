@@ -22,7 +22,7 @@ $connect= mysqli_connect('localhost','root','','testin');
   
     $row=mysqli_fetch_array($result);
     
-    $_SESSION['user-id']=$row['id']; 
+    $_SESSION['user-id']= $row['id']; 
      if(mysqli_num_rows($result)>0)
     echo 'username already exit';
     if($row['username']==$username && $row['password']==$password){
