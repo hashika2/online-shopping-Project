@@ -13,7 +13,9 @@
                 float: left;
                 width: 50%;
             }
-            
+            .details{
+                padding-left:12px
+            }
             
               
             </style>
@@ -32,7 +34,7 @@
                       <input class="input" type="text"placeholder ="search.."style="  border-radius:10px;width:800px" ><button type="submit"style="  border-radius:10px;">search</button>
                     </ul>
                     <?php 
-               $connection = mysqli_connect('localhost','root','','testin');
+               $connection = mysqli_connect('localhost','root','','testin');  
                
                $id=$_GET["id"];
                 if($connection){
@@ -44,7 +46,7 @@
                             <div class="itemimage">
                             <form method="post" action="cartinfo7.php?action=add&id=<?php echo $row["id"]; ?>">
                                      <h5 style="font-size:40px;"><?php echo $row["name"]; ?></h5>
-                                    <img src="imagesA/<?php echo $row['image']; ?>" height="400px" width="440px"> 
+                                    <img src="images/<?php echo $row['image']; ?>" height="400px" width="440px"> 
                                     <p style="color:white ;font-weight:bold;text-align:center;font-size:30px">PRICE   :$<?php echo $row["price"] ; ?></p>  
                                     <input type="text" name="quantity"  value="1" style="margin-left:50px;height:40px">
                                     <input type="hidden" name="hidden_name" value="<?php echo $row["name"];?> ">
@@ -73,7 +75,7 @@
                     
                 </div>
             </div>
-            <div class="descr">
+            <di v class="details" >
                 <label>Name</label>
                 <input type="text" name="name"><br>
                 <label>Email</label>

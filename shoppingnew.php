@@ -1,17 +1,20 @@
-<!--<?php
+<?php
 session_start();
-if(isset($_GET['q'])){
-if($_GET['q']=='search...'){
-  header('location:shoppingnew.php');
-}
-}
+// if(isset($_GET['q'])){
+//   if($_GET['q']=='search...'){
+//     header('location:shoppingnew.php');
+//   }
+// }
 
-if($_GET['q']!==''){
-$connect=include_once("connection.php");
-//$db=mysqli_select_db($connect,'searchbar ')
-$q = $_GET['q'];
-
- ?>-->
+// if($_GET['q']!==''){
+// $connect=include_once("connection.php");
+// //$db=mysqli_select_db($connect,'searchbar ')
+// $q = $_GET['q'];
+$connection = mysqli_connect('localhost','root','','testin');
+if(isset($_GET['q'])) {
+  $search = mysqli_real_escape_string($connection,trim($_GET['q']));
+  $query = "SELECT * from cart where name like '%$search%' ORDER BY name";
+ ?>
 
 <!DOCTYPE html>
 <html>
@@ -25,8 +28,8 @@ $q = $_GET['q'];
      <link href="webcss1.css" type="text/css" rel="stylesheet">
     <style>
       *{
-    padding: 0%;
-    margin:0%;
+        padding: 0%;
+        margin:0%;
        }
        .dropdown{
          width:180px;
@@ -55,48 +58,48 @@ $q = $_GET['q'];
           </div>
       </div>
 </div>
-        <form action="shoppingnew.php"  method="post" id="searchform">
+  <form action="searchItems.php"  method="get" id="searchform">
         <img src="images/Ca.PNG " height="60px" width="150px">
         <img src="images/Capture.PNG " height="60px" width="250px">
 
 
             <li class><a href="sign_in.php">sign in</a></li>
             <li class><a href="partner.php">partner</a></li>
-            <li class><a href="register.php">sign out</a></li>
+            <li class><a href="register.php">sign up</a></li>
 
-          <input class="input" type="text"placeholder ="search.."name = "q" id='q1' style="width:500px" >
+          <input class="input" type="text"placeholder ="search.." name = "q" id='q1' style="width:500px" >
            <input  type="submit" name = "search" onclick="window.location.href='shoppingnew.php?document.getElementById('q1').value'" placeholder="Enter" class="bttn" value="search"style="  border-radius:10px">
-</form>
+  </form>
 
 <?php
-if(!isset($q)){
-  echo '';
-}else{
-$query=mysqli_query($connect,"SELECT * from product where title like '%$q%'");
-$num_rows=mysqli_num_rows($query);
+  if(!isset($q)){
+    echo '';
+  }else{
+  $query=mysqli_query($connect,"SELECT * from product where title like '%$q%'");
+  $num_rows=mysqli_num_rows($query);
+  ?>
+  <p> <strong><?php echo $num_rows; ?></strong> results for '<?php echo $q ?>'</p>
+  <?php
+
+    while($row=mysqli_fetch_array($query)){
+      $id=$row['id'];
+      $title=$row['title'];
+      $desc=$row['description'];
+
+      echo '<h3>'.$title.'</h3><p>'.$desc. "</p><br />";
+
+    }
+  }
+
+  ?>
+  </body>
+  </html>
+  <?php
+}
+  else{
+    header('location:shoppingnew.php');
+  }
 ?>
-<p> <strong><?php echo $num_rows; ?></strong> results for '<?php echo $q ?>'</p>
-<?php
-
-while($row=mysqli_fetch_array($query)){
-  $id=$row['id'];
-  $title=$row['title'];
-  $desc=$row['description'];
-
-  echo '<h3>'.$title.'</h3><p>'.$desc. "</p><br />";
-
-}
-}
-
- ?>
-</body>
-</html>
-<?php
-}
-else{
-  header('location:shoppingnew.php');
-}
- ?>
 
 
         </ul>
